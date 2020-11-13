@@ -6,7 +6,7 @@ class HeaderDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      //color: Colors.green,
+      color: Colors.grey[100],
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         //mainAxisSize: MainAxisSize.max,
@@ -18,10 +18,13 @@ class HeaderDesktop extends StatelessWidget {
                 'CEENES',
                 style: TextStyle(
                     fontSize: 60,
-                    decoration: TextDecoration.none, color: Colors.pink[300]),
+                    decoration: TextDecoration.none,
+                    color: Colors.pink[300],
+                    fontFamily: 'Trueno Bold'),
               ),
             ),
           ),
+
           Container(
             //color: Colors.amber,
             child: ButtonBar(

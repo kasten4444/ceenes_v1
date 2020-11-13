@@ -5,7 +5,6 @@ import 'package:ceenes/Widgets/body_responsive.dart';
 
 void main() {
   runApp(MyApp());
-
 }
 
 class MyApp extends StatelessWidget {
@@ -23,13 +22,15 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            HeaderResponsive(),
-            BodyResponsive()
-          ],
-        ),
+      child: Column(
+        children: [
+          HeaderResponsive(),
+          SingleChildScrollView(
+            child: Column(
+              children: [BodyResponsive()],
+            ),
+          ),
+        ],
       ),
     );
   }

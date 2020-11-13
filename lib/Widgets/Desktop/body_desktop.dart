@@ -22,7 +22,9 @@ class BodyDesktop extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 50,
                             decoration: TextDecoration.none,
-                            color: Colors.black),
+                            color: Colors.black,
+                          fontFamily: 'Segoe',
+                        ),
                       ),
                       SelectableText(
                         'Durch unseren Swipe Algorthums findest du in Sekunden schnelle mit deinen Freunden '
@@ -30,7 +32,9 @@ class BodyDesktop extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 25,
                             decoration: TextDecoration.none,
-                            color: Colors.black),
+                            color: Colors.black,
+                          fontFamily: 'Segoe',
+                        ),
                       ),
                     ],
                   ),
@@ -39,7 +43,8 @@ class BodyDesktop extends StatelessWidget {
             ),
             Expanded(
               flex: 1,
-              child: Center(
+              child: Align(
+                alignment: Alignment.center,
                 child: Padding(
                   padding: const EdgeInsets.all(20),
                   child: Container(
