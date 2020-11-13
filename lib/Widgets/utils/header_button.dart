@@ -20,7 +20,7 @@ class HeaderButton extends StatelessWidget {
         ),
         onPressed: () {},
         color: my_blue,
-        splashColor: my_pink,
+        //splashColor: my_pink,
         shape: new RoundedRectangleBorder(
             borderRadius: new BorderRadius.circular(10))
     );

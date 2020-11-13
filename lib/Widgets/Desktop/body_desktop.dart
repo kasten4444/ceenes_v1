@@ -52,7 +52,7 @@ class BodyDesktop extends StatelessWidget {
               constraints: BoxConstraints(maxHeight: 500, maxWidth: 500),
               child: Container(
                   child: Image.asset(
-                frau_im_sessel,
+                zwei_auf_dem_sofa,
               )),
             ),
           ),
