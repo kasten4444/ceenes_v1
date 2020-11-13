@@ -22,15 +22,10 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
-        children: [
-          HeaderResponsive(),
-          SingleChildScrollView(
-            child: Column(
-              children: [BodyResponsive()],
-            ),
-          ),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [HeaderResponsive(), BodyResponsive()],
+        ),
       ),
     );
   }

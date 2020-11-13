@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:ceenes/Styles/Colors/colors.dart';
+
 
 class HeaderButton extends StatelessWidget {
   final String text;
@@ -17,8 +19,8 @@ class HeaderButton extends StatelessWidget {
           ),
         ),
         onPressed: () {},
-        color: Colors.blue[300],
-        splashColor: Colors.pinkAccent[100],
+        color: my_blue,
+        splashColor: my_pink,
         shape: new RoundedRectangleBorder(
             borderRadius: new BorderRadius.circular(10))
     );
