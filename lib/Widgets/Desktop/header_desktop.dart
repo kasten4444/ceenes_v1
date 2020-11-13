@@ -48,9 +48,9 @@ class HeaderDesktop extends StatelessWidget {
             child: ButtonBar(
               alignment: MainAxisAlignment.end,
               children: [
-                HeaderButton('Wie funktioniert\'s'),
-                HeaderButton('Über uns'),
-                HeaderButton('Impressum & Datenschutz')
+                HeaderButton('ABOUT'),
+                HeaderButton('SHARING'),
+                HeaderButton('DEMO')
               ],
             ),
           )

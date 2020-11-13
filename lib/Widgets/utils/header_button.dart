@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:ceenes/Styles/Colors/colors.dart';
 
-
 class HeaderButton extends StatelessWidget {
   final String text;
 
@@ -10,19 +9,25 @@ class HeaderButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            this.text,
-            style: TextStyle(color: Colors.white),
-          ),
+    return TextButton(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(
+          this.text,
+          style: TextStyle(
+              color: my_blue,
+              fontFamily: 'Segoe',
+              fontSize: 30,
+              fontWeight: FontWeight.bold),
         ),
-        onPressed: () {},
-        color: my_blue,
-        //splashColor: my_pink,
+      ),
+      onPressed: () {},
+      //splashColor: my_pink,
+      /*
         shape: new RoundedRectangleBorder(
             borderRadius: new BorderRadius.circular(10))
+
+         */
     );
   }
 }
