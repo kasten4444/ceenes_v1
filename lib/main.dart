@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+/*
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -33,8 +34,9 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
-/*
+ */
 
+/*
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -49,3 +51,25 @@ class MyHomePage extends StatelessWidget {
 }
 
  */
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        ListView(
+          children: [
+            SizedBox(
+              height: 50,
+            ),
+            BodyResponsive()
+          ],
+        ),
+        Align(
+          alignment: Alignment.topCenter,
+          child: HeaderResponsive(),
+        )
+      ],
+    );
+  }
+}
