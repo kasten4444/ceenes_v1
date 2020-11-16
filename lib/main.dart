@@ -8,8 +8,6 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'Widgets/body_responsive.dart';
 import 'Widgets/header_responsive.dart';
 
-
-
 void main() {
   runApp(MyApp());
 }
@@ -24,35 +22,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-/*
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: MyAppBar.getAppBar() ,
-      body: BodyResponsive(),
-    );
-  }
-}
-
- */
-
-/*
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: SingleChildScrollView(
-        child: Column(
-          children: [HeaderResponsive(), BodyResponsive()],
-        ),
-      ),
-    );
-  }
-}
-
- */
 
 class MyHomePage extends StatelessWidget {
   @override

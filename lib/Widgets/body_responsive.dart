@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import 'Desktop/body_desktop.dart';
+import 'Desktop/landingpage_home/body_desktop.dart';
 
 class BodyResponsive extends StatelessWidget {
   @override
