@@ -30,6 +30,7 @@ dependencies:
   flutter_html: ^1.0.2
   flutter_email_sender: 2.2.2
   http: ^0.12.2
+  firebase_core: "^0.5.2"
 
 
 
@@ -37,6 +38,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_web_compilers:
+
 
 
 # For information on the generic Dart part of this file, see the

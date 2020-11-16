@@ -8,10 +8,9 @@ import 'package:flutter_html/html_parser.dart';
 import 'dart:async';
 import 'dart:io';
 
+import 'dart:html';
 import 'package:ceenes/assets/Styles/Colors/colors.dart';
 import 'package:ceenes/assets/Styles/Icons/my_icons.dart';
-
-
 
 class Row5 extends StatefulWidget {
   @override
@@ -19,10 +18,6 @@ class Row5 extends StatefulWidget {
 }
 
 class _Row5State extends State<Row5> {
-
-  TextEditingController emailController_1 = new TextEditingController();
-  TextEditingController emailController_2 = new TextEditingController();
-
 
   @override
   Widget build(BuildContext context) {
