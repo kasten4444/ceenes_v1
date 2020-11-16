@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ceenes/Widgets/utils/header_button.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ceenes/Styles/Icons/my_icons.dart';
-import 'package:ceenes/Styles/Colors/colors.dart';
+
+import 'package:ceenes/assets/Styles/Colors/colors.dart';
+import 'package:ceenes/assets/Styles/Icons/my_icons.dart';
+
+import '../utils/header_button.dart';
 
 class HeaderDesktop extends StatelessWidget {
   @override

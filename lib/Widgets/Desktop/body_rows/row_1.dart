@@ -1,6 +1,7 @@
+import 'package:ceenes/assets/Styles/Colors/colors.dart';
+import 'package:ceenes/assets/Styles/Icons/my_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:ceenes/Styles/Icons/my_icons.dart';
-import 'package:ceenes/Styles/Colors/colors.dart';
+
 
 class Row1 extends StatelessWidget {
   @override

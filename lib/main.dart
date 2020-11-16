@@ -1,12 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ceenes/Widgets/header_responsive.dart';
-import 'package:ceenes/Widgets/body_responsive.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:ceenes/Widgets/app_bar.dart';
+
+import 'Widgets/body_responsive.dart';
+import 'Widgets/header_responsive.dart';
+
+
 
 void main() {
   runApp(MyApp());

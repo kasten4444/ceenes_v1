@@ -1,8 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:ceenes/Styles/Icons/my_icons.dart';
-import 'package:ceenes/Styles/Colors/colors.dart';
 
-class Row5 extends StatelessWidget {
+
+import 'package:flutter/widgets.dart';
+import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html/html_parser.dart';
+
+import 'dart:async';
+import 'dart:io';
+
+import 'package:ceenes/assets/Styles/Colors/colors.dart';
+import 'package:ceenes/assets/Styles/Icons/my_icons.dart';
+
+
+
+class Row5 extends StatefulWidget {
+  @override
+  _Row5State createState() => _Row5State();
+}
+
+class _Row5State extends State<Row5> {
+
+  TextEditingController emailController_1 = new TextEditingController();
+  TextEditingController emailController_2 = new TextEditingController();
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -11,7 +32,7 @@ class Row5 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Padding(
               padding: const EdgeInsets.all(80),
               child: Container(
@@ -35,10 +56,12 @@ class Row5 extends StatelessWidget {
                           fontFamily: 'Segoe',
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: 15,),
+                    SizedBox(
+                      height: 15,
+                    ),
                     SelectableText(
                       'Teste unsere neuen Features als erster aus und werden informiert, wenn'
-                          'es was neues gibt.',
+                      'es was neues gibt.',
                       style: TextStyle(
                         fontSize: 25,
                         decoration: TextDecoration.none,
@@ -51,38 +74,7 @@ class Row5 extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(
-            flex: 1,
-            child: Padding(
-              padding: const EdgeInsets.all(30.0),
-              child: Container(
-                child: Material(
-                  child: Column(
-                    children: [
-                      TextField(
-                        cursorColor: my_pink,
-                        decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: 'YOUR MESSAGE...'
-                        ),
-                      ),
-                      TextField(
-                        //autofocus: true,
-                        cursorColor: my_pink,
-                        decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: 'YOUR E-MAIL...'
-                        ),
-                      ),
 
-                    ],
-                  ),
-                ),
-              ),
-
-            ),
-
-          ),
         ],
       ),
     );

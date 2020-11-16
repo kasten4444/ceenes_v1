@@ -1,12 +1,11 @@
-import 'package:ceenes/Styles/Colors/colors.dart';
-import 'package:ceenes/Styles/Icons/my_icons.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ceenes/Widgets/Desktop/body_rows/row_1.dart';
-import 'package:ceenes/Widgets/Desktop/body_rows/row_2.dart';
-import 'package:ceenes/Widgets/Desktop/body_rows/row_3.dart';
-import 'package:ceenes/Widgets/Desktop/body_rows/row_4.dart';
-import 'package:ceenes/Widgets/Desktop/body_rows/row_5.dart';
+
+import 'body_rows/row_1.dart';
+import 'body_rows/row_2.dart';
+import 'body_rows/row_3.dart';
+import 'body_rows/row_4.dart';
 
 
 
@@ -24,7 +23,7 @@ class BodyDesktop extends StatelessWidget {
         SizedBox(height: 50,),
         Row4(),
         SizedBox(height: 50,),
-        Row5(),
+        //Row5(),
 
       ]),
     );
