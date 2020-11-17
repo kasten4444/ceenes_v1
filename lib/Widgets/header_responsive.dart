@@ -1,3 +1,4 @@
+import 'package:ceenes/Widgets/Tablet/header_tablet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -20,10 +21,7 @@ class HeaderResponsive extends StatelessWidget {
         }
 
         if (sizingInformation.deviceScreenType == DeviceScreenType.tablet) {
-          return Container(
-            color: Colors.blue,
-            child: Text("Tablet"),
-          );;
+          return HeaderTablet();
         }
 
         if (sizingInformation.deviceScreenType == DeviceScreenType.watch) {

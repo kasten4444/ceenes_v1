@@ -1,3 +1,4 @@
+import 'package:ceenes/Widgets/Tablet/landingpage_home/body_tablet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -21,10 +22,7 @@ class BodyResponsive extends StatelessWidget {
         }
 
         if (sizingInformation.deviceScreenType == DeviceScreenType.tablet) {
-          return Container(
-            color: Colors.blue,
-            child: Text("Body Tablet"),
-          );;
+          return BodyTablet();
         }
 
         if (sizingInformation.deviceScreenType == DeviceScreenType.watch) {
