@@ -1,3 +1,4 @@
+import 'package:ceenes/assets/Styles/Colors/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -30,9 +31,6 @@ class MyHomePage extends StatelessWidget {
       children: [
         ListView(
           children: [
-            SizedBox(
-              height: 50,
-            ),
             BodyResponsive()
           ],
         ),
