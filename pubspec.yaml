@@ -28,9 +28,8 @@ dependencies:
   #cupertino_icons: ^1.0.0
   responsive_builder:
   flutter_html: ^1.0.2
-  flutter_email_sender: 2.2.2
   http: ^0.12.2
-  firebase_core: "^0.5.2"
+
 
 
 
