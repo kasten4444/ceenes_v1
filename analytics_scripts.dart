@@ -8,8 +8,6 @@ gtag('js', new Date());
 
 gtag('config', 'G-JFV1QZ3622');
 
-
-
 </script>
 
  */
@@ -31,7 +29,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 /*
-!-- Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
 <noscript>
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGJ6SSX"
           height="0" width="0" style="display:none;visibility:hidden"></iframe>

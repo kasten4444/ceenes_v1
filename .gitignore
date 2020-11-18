@@ -66,3 +66,4 @@ node_modules/
 .env
 /build/
 /.idea/
+/.dart_tool/
