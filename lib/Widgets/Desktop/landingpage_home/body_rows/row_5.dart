@@ -14,9 +14,7 @@ class Row5 extends StatefulWidget {
 
 class _Row5State extends State<Row5> {
   final myController = TextEditingController();
-  final db = Firestore.instance;
-
-
+  final db = FirebaseFirestore.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +82,6 @@ class _Row5State extends State<Row5> {
 
                         String email = myController.text;
                         print('pressed');
-                        print(db.collection("emails").document("3EvM9pz3mB3vy8aiG3YC").get());
                         /*
                         db.collection("emails").add({
                           "email" : "testTest@gmail.com"
