@@ -3,15 +3,10 @@ import 'package:flutter/material.dart';
 
 
 import 'package:flutter/widgets.dart';
-import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_html/html_parser.dart';
 
-import 'dart:async';
-import 'dart:io';
 
-import 'dart:html';
+
 import 'package:ceenes/assets/Styles/Colors/colors.dart';
-import 'package:ceenes/assets/Styles/Icons/my_icons.dart';
 
 class Row5_Tablet extends StatefulWidget {
   @override
