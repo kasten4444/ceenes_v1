@@ -14,7 +14,14 @@ class Row5 extends StatefulWidget {
 
 class _Row5State extends State<Row5> {
   final myController = TextEditingController();
-  final db = FirebaseFirestore.instance;
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    myController.dispose();
+    super.dispose();
+  }
+
+  FirebaseFirestore firestore = FirebaseFirestore.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +80,9 @@ class _Row5State extends State<Row5> {
                 children: [
                   Expanded(
                     flex: 1,
-                    child: TextField(),
+                    child: TextField(
+                      controller: myController,
+                    ),
                   ),
                   Expanded(
                     flex: 1,
@@ -81,13 +90,12 @@ class _Row5State extends State<Row5> {
                       onPressed: () async {
 
                         String email = myController.text;
-                        print('pressed');
-                        /*
-                        db.collection("emails").add({
-                          "email" : "testTest@gmail.com"
+                        print(email);
+
+                        firestore.collection("emails").add({
+                          "email" : email
                         });
 
-                         */
                       },
                       child: Container(
                         child: Text('Press'),
