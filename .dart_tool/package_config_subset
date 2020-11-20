@@ -90,6 +90,10 @@ crypto
 2.3
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-2.1.5/
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-2.1.5/lib/
+email_validator
+1.24
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/email_validator-1.0.6/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/email_validator-1.0.6/lib/
 fake_async
 2.10
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0-nullsafety.1/

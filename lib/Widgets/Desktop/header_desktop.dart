@@ -10,7 +10,7 @@ class HeaderDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: my_pink.withOpacity(0.2),
+      color: my_dark_grey,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
