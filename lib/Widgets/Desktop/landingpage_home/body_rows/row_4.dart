@@ -8,37 +8,45 @@ class Row4 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        height: MediaQuery. of(context). size. height,
+        height: MediaQuery.of(context).size.height,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Expanded(
               flex: 1,
               child: Padding(
-                padding: const EdgeInsets.only(left:250, top: 180),
+                padding: const EdgeInsets.only(
+                  left: 250,
+                ),
                 child: Container(
-                  //alignment: Alignment.centerRight,
                   child: Column(
+
+                    mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SelectableText(
-                        '3. REVIEW RANKINGS',
-                        style: TextStyle(
-                            fontSize: 45,
-                            decoration: TextDecoration.none,
-                            color: my_pink,
-                            fontFamily: 'Segoe',
-                            fontWeight: FontWeight.bold),
+                      Expanded(
+                        child: SelectableText(
+                          '3. REVIEW RANKINGS',
+                          style: TextStyle(
+                              fontSize: 40,
+                              decoration: TextDecoration.none,
+                              color: my_pink,
+                              fontFamily: 'Segoe',
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
-                      SizedBox(height: 15,),
-                      SelectableText(
-                        'Nachdem alle mit dem Swipen fertig sind, schaut ihr euch gemeinsam euer Ranking '
-                            'der Filme an. Ihr wisst jetzt, was ihr guccken könnt.',
-                        style: TextStyle(
-                          fontSize: 20,
-                          decoration: TextDecoration.none,
-                          color: Colors.white,
-                          fontFamily: 'Segoe',
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Expanded(
+                        child: SelectableText(
+                          'Nachdem alle mit dem Swipen fertig sind, schaut ihr euch gemeinsam euer Ranking '
+                          'der Filme an. Ihr wisst jetzt, was ihr guccken könnt.',
+                          style: TextStyle(
+                            fontSize: 20,
+                            decoration: TextDecoration.none,
+                            color: Colors.white,
+                            fontFamily: 'Segoe',
+                          ),
                         ),
                       ),
                     ],
@@ -48,18 +56,19 @@ class Row4 extends StatelessWidget {
             ),
             Expanded(
               flex: 1,
-              child: Padding(
-                padding: const EdgeInsets.all(30.0),
+              child: Container(
+                alignment: Alignment.centerLeft,
+
                 child: ConstrainedBox(
-                  constraints: BoxConstraints(maxHeight:380, maxWidth:380),
-                  child: Container(
-                    margin: EdgeInsets.only(right: 100),
-                      child: Image.asset(
-                        smartphone_3,
-                      )),
+                  constraints: BoxConstraints(maxHeight: 450, maxWidth: 450),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 60),
+                    child: Image.asset(
+                      smartphone_3,
+                    ),
+                  ),
                 ),
               ),
-
             )
           ],
         ),
