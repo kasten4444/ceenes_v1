@@ -46,32 +46,28 @@ class _Row1State extends State<Row1> {
                     mainAxisAlignment:  MainAxisAlignment.center,
                     //crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Expanded(
-                        child: Align(
-                          alignment: Alignment.centerLeft,
-                          child: SelectableText(
-                            'CEENES.',
-                            style: TextStyle(
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: SelectableText(
+                          'CEENES.',
+                          style: TextStyle(
 
-                                fontSize: 100,
-                                decoration: TextDecoration.none,
-                                color: my_pink,
-                                fontFamily: 'Segoe',
-                                fontWeight: FontWeight.bold),
-                          ),
+                              fontSize: 100,
+                              decoration: TextDecoration.none,
+                              color: my_pink,
+                              fontFamily: 'Segoe',
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                       SizedBox(height: 30,),
-                      Expanded(
-                        child: SelectableText(
-                          'Wir haben es uns zur Aufgabe gemacht, es zu schaffen, dass du mit '
-                              'deinen Freundinnen und Freunden innerhalb von 2 Minuten den perfekten Films findest.',
-                          style: TextStyle(
-                            fontSize: 20,
-                            decoration: TextDecoration.none,
-                            color: Colors.white,
-                            fontFamily: 'Segoe',
-                          ),
+                      SelectableText(
+                        'Wir haben es uns zur Aufgabe gemacht, es zu schaffen, dass du mit '
+                            'deinen Freundinnen und Freunden innerhalb von 2 Minuten den perfekten Films findest.',
+                        style: TextStyle(
+                          fontSize: 20,
+                          decoration: TextDecoration.none,
+                          color: Colors.white,
+                          fontFamily: 'Segoe',
                         ),
                       ),
                       SizedBox(height: 30,),

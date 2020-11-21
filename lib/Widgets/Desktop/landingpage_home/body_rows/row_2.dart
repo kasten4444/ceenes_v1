@@ -26,32 +26,28 @@ class Row2 extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Expanded(
-                        child: SelectableText(
-                          '1. CREATE A GROUP',
-                          style: TextStyle(
-                              fontSize: 40,
-                              decoration: TextDecoration.none,
-                              color: my_pink,
-                              fontFamily: 'Segoe',
-                              fontWeight: FontWeight.bold),
-                        ),
+                      SelectableText(
+                        '1. CREATE A GROUP',
+                        style: TextStyle(
+                            fontSize: 40,
+                            decoration: TextDecoration.none,
+                            color: my_pink,
+                            fontFamily: 'Segoe',
+                            fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 15,
                       ),
-                      Expanded(
-                        child: SelectableText(
-                          'Erstell eine Gruppe und lade deine Freunde ein. Lass alle Möglichkeiten'
-                          'offen oder triff weitere Beschränkungen. Nutze den QR Code oder den Link um '
-                              'deine Freunde'
-                          'einzuladen.',
-                          style: TextStyle(
-                            fontSize: 20,
-                            decoration: TextDecoration.none,
-                            color: Colors.white,
-                            fontFamily: 'Segoe',
-                          ),
+                      SelectableText(
+                        'Erstell eine Gruppe und lade deine Freunde ein. Lass alle Möglichkeiten'
+                        'offen oder triff weitere Beschränkungen. Nutze den QR Code oder den Link um '
+                            'deine Freunde'
+                        'einzuladen.',
+                        style: TextStyle(
+                          fontSize: 20,
+                          decoration: TextDecoration.none,
+                          color: Colors.white,
+                          fontFamily: 'Segoe',
                         ),
                       ),
                     ],

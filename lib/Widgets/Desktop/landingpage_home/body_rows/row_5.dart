@@ -31,7 +31,7 @@ class _Row5State extends State<Row5> {
     return Container(
       //alignment: Alignment.topCenter,
       //color: Colors.green,
-      height: MediaQuery.of(context).size.height ,
+      height: MediaQuery.of(context).size.height,
       child: Row(
         //mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

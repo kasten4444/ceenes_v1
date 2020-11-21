@@ -23,30 +23,26 @@ class Row4 extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Expanded(
-                        child: SelectableText(
-                          '3. REVIEW RANKINGS',
-                          style: TextStyle(
-                              fontSize: 40,
-                              decoration: TextDecoration.none,
-                              color: my_pink,
-                              fontFamily: 'Segoe',
-                              fontWeight: FontWeight.bold),
-                        ),
+                      SelectableText(
+                        '3. REVIEW RANKINGS',
+                        style: TextStyle(
+                            fontSize: 40,
+                            decoration: TextDecoration.none,
+                            color: my_pink,
+                            fontFamily: 'Segoe',
+                            fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 15,
                       ),
-                      Expanded(
-                        child: SelectableText(
-                          'Nachdem alle mit dem Swipen fertig sind, schaut ihr euch gemeinsam euer Ranking '
-                          'der Filme an. Ihr wisst jetzt, was ihr guccken könnt.',
-                          style: TextStyle(
-                            fontSize: 20,
-                            decoration: TextDecoration.none,
-                            color: Colors.white,
-                            fontFamily: 'Segoe',
-                          ),
+                      SelectableText(
+                        'Nachdem alle mit dem Swipen fertig sind, schaut ihr euch gemeinsam euer Ranking '
+                        'der Filme an. Ihr wisst jetzt, was ihr guccken könnt.',
+                        style: TextStyle(
+                          fontSize: 20,
+                          decoration: TextDecoration.none,
+                          color: Colors.white,
+                          fontFamily: 'Segoe',
                         ),
                       ),
                     ],

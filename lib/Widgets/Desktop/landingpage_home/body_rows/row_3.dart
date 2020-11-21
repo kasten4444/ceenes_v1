@@ -38,30 +38,26 @@ class Row3 extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Expanded(
-                        child: SelectableText(
-                          '2. START SWIPING',
-                          style: TextStyle(
-                              fontSize: 45,
-                              decoration: TextDecoration.none,
-                              color: my_pink,
-                              fontFamily: 'Segoe',
-                              fontWeight: FontWeight.bold),
-                        ),
+                      SelectableText(
+                        '2. START SWIPING',
+                        style: TextStyle(
+                            fontSize: 45,
+                            decoration: TextDecoration.none,
+                            color: my_pink,
+                            fontFamily: 'Segoe',
+                            fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 15,
                       ),
-                      Expanded(
-                        child: SelectableText(
-                          'Jeder hat jeder deiner Freunde einen Link bekommen und kann anfangen zu swipen. Bewerte jeden'
-                          'Film, sodass ihr am Ende ein Ranking habt, welcher Film von den meisten geschaut werden will.',
-                          style: TextStyle(
-                            fontSize: 20,
-                            decoration: TextDecoration.none,
-                            color: Colors.white,
-                            fontFamily: 'Segoe',
-                          ),
+                      SelectableText(
+                        'Jeder hat jeder deiner Freunde einen Link bekommen und kann anfangen zu swipen. Bewerte jeden'
+                        'Film, sodass ihr am Ende ein Ranking habt, welcher Film von den meisten geschaut werden will.',
+                        style: TextStyle(
+                          fontSize: 20,
+                          decoration: TextDecoration.none,
+                          color: Colors.white,
+                          fontFamily: 'Segoe',
                         ),
                       ),
                     ],
