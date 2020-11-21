@@ -1,3 +1,4 @@
+import 'package:ceenes/Widgets/Desktop/privacy_policy_route/privacy_policy_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,6 @@ class Row6 extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-
           Padding(
             padding: const EdgeInsets.all(15),
             child: Container(
@@ -27,9 +27,23 @@ class Row6 extends StatelessWidget {
           ),
           HeaderButton('ABOUT US'),
           HeaderButton('CONTACT US'),
-          HeaderButton('DATENSCHUTZ'),
-
-
+          TextButton(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'DATENSCHUTZ',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Segoe',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(context,
+              MaterialPageRoute(builder: (context) => PrivacyPolicy_Route()));
+            },
+          ),
         ],
       ),
     );
