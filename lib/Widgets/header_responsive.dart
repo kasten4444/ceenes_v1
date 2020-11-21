@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import 'Desktop/header_desktop.dart';
+import 'Desktop/landingpage_home/header_desktop.dart';
 
 class HeaderResponsive extends StatelessWidget {
   @override

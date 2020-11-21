@@ -4,14 +4,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 
-
-class Row1 extends StatefulWidget {
+class Row5 extends StatefulWidget {
   @override
-  _Row1State createState() => _Row1State();
+  _Row5State createState() => _Row5State();
 }
 
-class _Row1State extends State<Row1> {
+class _Row5State extends State<Row5> {
   final myController = TextEditingController();
+
   //final _height = 40;
   bool _autovalidate = false;
 
@@ -25,49 +25,48 @@ class _Row1State extends State<Row1> {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   final _formKey = GlobalKey<FormState>();
 
-
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Container(
         //color: Colors.green,
-        height: MediaQuery. of(context). size. height,
+        height: MediaQuery.of(context).size.height,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Expanded(
               flex: 1,
               child: Padding(
-                padding: const EdgeInsets.only(left: 80),
+                padding: const EdgeInsets.fromLTRB(80, 0, 20, 20),
                 child: Container(
                   //color: Colors.green,
                   child: Column(
-                    mainAxisAlignment:  MainAxisAlignment.center,
-                    //crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: SelectableText(
-                          'CEENES.',
-                          style: TextStyle(
-                              shadows: <Shadow>[
-                                Shadow(
-                                  offset: Offset(2.0, 2.0),
-                                  blurRadius: 5.0,
-                                  color: my_pink,
-                                ),
-                              ],
-                              fontSize: 80,
-                              decoration: TextDecoration.none,
-                              color: my_pink,
-                              fontFamily: 'Segoe',
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      SizedBox(height: 30,),
                       SelectableText(
-                        'Wir haben es uns zur Aufgabe gemacht, es zu schaffen, dass du mit '
-                            'deinen Freundinnen und Freunden innerhalb von 2 Minuten den perfekten Films findest.',
+                        'TEST OUR LATEST FEATURES.',
+                        style: TextStyle(
+                            shadows: <Shadow>[
+                              Shadow(
+                                offset: Offset(2.0, 2.0),
+                                blurRadius: 5.0,
+                                color: my_pink,
+                              ),
+                            ],
+                            fontSize: 45,
+                            decoration: TextDecoration.none,
+                            color: my_pink,
+                            fontFamily: 'Segoe',
+                            fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      SelectableText(
+                        'Unsere Web-App ist ständig im Umbruch und wir benötigen deine Hilfe, um unsere Features zu testen.'
+                            ' Hinterlasse hier deine E-Mail Adresse, um zun den ertsen USern gehören zu können. Damit hilfst'
+                            ' du uns beim Testen un der Entwicklung neuer Features. Wir freuen uns von dir zu hören.',
                         style: TextStyle(
                           fontSize: 30,
                           decoration: TextDecoration.none,
@@ -77,10 +76,9 @@ class _Row1State extends State<Row1> {
                       ),
                       SizedBox(height: 30,),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Expanded(
-                            flex: 3,
+                            flex: 2,
                             child: Form(
                               key: _formKey,
                               autovalidate: _autovalidate,
@@ -90,7 +88,7 @@ class _Row1State extends State<Row1> {
                                     decoration: InputDecoration(
                                         errorMaxLines: 4,
                                         errorStyle:
-                                        TextStyle(color: Colors.white),
+                                            TextStyle(color: Colors.white),
                                         filled: true,
                                         fillColor: my_pink,
                                         //labelText: 'Email',
@@ -99,14 +97,15 @@ class _Row1State extends State<Row1> {
                                             color: my_pink,
                                           ),
                                           borderRadius:
-                                          BorderRadius.circular(10.0),
+                                              BorderRadius.circular(10.0),
                                         ),
                                         hintText: 'Deine Email...',
                                         hintStyle: TextStyle(
-                                            color: Colors.white.withOpacity(0.5)),
+                                            color: Colors.white
+                                                .withOpacity(0.5)),
                                         focusedBorder: OutlineInputBorder(
                                             borderSide:
-                                            BorderSide(color: my_pink),
+                                                BorderSide(color: my_pink),
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(20))),
                                         labelStyle: TextStyle(
@@ -114,10 +113,11 @@ class _Row1State extends State<Row1> {
                                         )),
 
                                     //obscureText: true,
-                                    style:
-                                    TextStyle(color: Colors.white, fontSize: 20),
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20),
                                     validator: (input) {
-                                      if (input.isEmpty | !EmailValidator.validate(input)) {
+                                      if (input.isEmpty |
+                                          !EmailValidator.validate(input)) {
                                         return 'Bitte gebe eine gültige Email Adresse an';
                                       }
                                       return null;
@@ -128,6 +128,7 @@ class _Row1State extends State<Row1> {
                               ),
                             ),
                           ),
+                          SizedBox(width: 30,),
                           Expanded(
                             flex: 1,
                             child: Padding(
@@ -148,7 +149,7 @@ class _Row1State extends State<Row1> {
                                       firestore
                                           .collection("emails")
                                           .add({"email": email});
-                                    } else{
+                                    } else {
                                       setState(() {
                                         _autovalidate = true;
                                       });
@@ -164,27 +165,10 @@ class _Row1State extends State<Row1> {
                               ),
                             ),
                           )
-
                         ],
                       )
-                      //Kontakt Email Feld
-
-
                     ],
                   ),
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Padding(
-                padding: const EdgeInsets.all(30.0),
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(maxHeight: 500, maxWidth: 500),
-                  child: Container(
-                      child: Image.asset(
-                        zwei_auf_dem_sofa,
-                      )),
                 ),
               ),
             )

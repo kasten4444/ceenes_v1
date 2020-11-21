@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:ceenes/assets/Styles/Colors/colors.dart';
 import 'package:ceenes/assets/Styles/Icons/my_icons.dart';
 
-import '../utils/header_button.dart';
+import '../../utils/header_button.dart';
 
 class HeaderDesktop extends StatelessWidget {
   @override
@@ -24,16 +24,17 @@ class HeaderDesktop extends StatelessWidget {
               ]),
             ),
           ),
-          HeaderButton('ABOUT'),
-          HeaderButton('SHARING'),
-          HeaderButton('DEMO'),
+          HeaderButton('1. STEP'),
+          HeaderButton('2. STEP'),
+          HeaderButton('3. STEP'),
+          HeaderButton('CONTACT US'),
           FlatButton(
             shape: RoundedRectangleBorder(
                 borderRadius: new BorderRadius.circular(30.0)),
             color: my_pink,
             onPressed: () {},
             child: Text(
-              'Create A Group',
+              'SHARE',
               style: TextStyle(color: Colors.white),
             ),
           )

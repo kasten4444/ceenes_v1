@@ -7,7 +7,9 @@ import 'package:ceenes/assets/Styles/Colors/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'body_rows/row_1_1.dart';
+import 'body_rows/row_5.dart';
+import 'body_rows/row_6.dart';
+
 
 class BodyDesktop extends StatelessWidget {
   @override
@@ -17,22 +19,21 @@ class BodyDesktop extends StatelessWidget {
         color: my_dark_grey,
         child: SingleChildScrollView(
           child: Column(children: [
+            /*
             Container(
               color: my_dark_grey,
               child: SizedBox(
                 height: 50,
               ),
             ),
+
+             */
             Row1(),
-            //SizedBox(height: 50,),
-            Row1_1(),
-            SizedBox(height: 50,),
             Row2(),
-            SizedBox(height: 50,),
             Row3(),
-            SizedBox(height: 50,),
             Row4(),
-            SizedBox(height: 50,),
+            Row5(),
+            Row6(),
 
           ]),
         ),
