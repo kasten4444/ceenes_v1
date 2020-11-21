@@ -2,6 +2,7 @@ import 'package:ceenes/assets/Styles/Colors/colors.dart';
 import 'package:ceenes/assets/Styles/Icons/my_icons.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:email_validator/email_validator.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
@@ -50,14 +51,8 @@ class _Row1State extends State<Row1> {
                         child: SelectableText(
                           'CEENES.',
                           style: TextStyle(
-                              shadows: <Shadow>[
-                                Shadow(
-                                  offset: Offset(2.0, 2.0),
-                                  blurRadius: 5.0,
-                                  color: my_pink,
-                                ),
-                              ],
-                              fontSize: 80,
+
+                              fontSize: 120,
                               decoration: TextDecoration.none,
                               color: my_pink,
                               fontFamily: 'Segoe',
@@ -71,7 +66,7 @@ class _Row1State extends State<Row1> {
                         style: TextStyle(
                           fontSize: 30,
                           decoration: TextDecoration.none,
-                          color: my_blue,
+                          color: Colors.white,
                           fontFamily: 'Segoe',
                         ),
                       ),
@@ -80,7 +75,7 @@ class _Row1State extends State<Row1> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Expanded(
-                            flex: 3,
+                            flex: 2,
                             child: Form(
                               key: _formKey,
                               autovalidate: _autovalidate,
@@ -103,7 +98,7 @@ class _Row1State extends State<Row1> {
                                         ),
                                         hintText: 'Deine Email...',
                                         hintStyle: TextStyle(
-                                            color: Colors.white.withOpacity(0.5)),
+                                            color: Colors.white.withOpacity(0.75)),
                                         focusedBorder: OutlineInputBorder(
                                             borderSide:
                                             BorderSide(color: my_pink),
@@ -156,8 +151,8 @@ class _Row1State extends State<Row1> {
                                   },
                                   child: Container(
                                     child: Text(
-                                      'Benachritige mich!',
-                                      style: TextStyle(color: Colors.white),
+                                      'Benachrichtige mich!',
+                                      style: TextStyle(color: Colors.white, fontSize: 20),
                                     ),
                                   ),
                                 ),
@@ -178,13 +173,16 @@ class _Row1State extends State<Row1> {
             Expanded(
               flex: 1,
               child: Padding(
-                padding: const EdgeInsets.all(30.0),
+                padding: const EdgeInsets.all(80.0),
                 child: ConstrainedBox(
-                  constraints: BoxConstraints(maxHeight: 500, maxWidth: 500),
+                  constraints: BoxConstraints(maxHeight: 1500, maxWidth: 1500),
                   child: Container(
-                      child: Image.asset(
-                        zwei_auf_dem_sofa,
-                      )),
+                    //color: Colors.grey,
+                    child: Image.asset(
+                      zwei_auf_dem_sofa,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
                 ),
               ),
             )

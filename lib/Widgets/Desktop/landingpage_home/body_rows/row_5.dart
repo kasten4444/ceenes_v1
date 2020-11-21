@@ -102,7 +102,7 @@ class _Row5State extends State<Row5> {
                                         hintText: 'Deine Email...',
                                         hintStyle: TextStyle(
                                             color: Colors.white
-                                                .withOpacity(0.5)),
+                                                .withOpacity(0.75)),
                                         focusedBorder: OutlineInputBorder(
                                             borderSide:
                                                 BorderSide(color: my_pink),

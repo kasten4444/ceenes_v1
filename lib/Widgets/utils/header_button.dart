@@ -16,7 +16,7 @@ class HeaderButton extends StatelessWidget {
         child: Text(
           this.text,
           style: TextStyle(
-              color: my_blue,
+              color: Colors.white,
               fontFamily: 'Segoe',
               fontSize: 20,
               fontWeight: FontWeight.bold),
