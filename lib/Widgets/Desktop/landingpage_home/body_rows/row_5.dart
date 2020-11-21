@@ -39,7 +39,7 @@ class _Row5State extends State<Row5> {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(80, 0, 20, 20),
                 child: Container(
-                  //color: Colors.green,
+                  padding: const EdgeInsets.only(left: 200,right:200),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,13 +47,6 @@ class _Row5State extends State<Row5> {
                       SelectableText(
                         'TEST OUR LATEST FEATURES.',
                         style: TextStyle(
-                            shadows: <Shadow>[
-                              Shadow(
-                                offset: Offset(2.0, 2.0),
-                                blurRadius: 5.0,
-                                color: my_pink,
-                              ),
-                            ],
                             fontSize: 45,
                             decoration: TextDecoration.none,
                             color: my_pink,
@@ -63,19 +56,21 @@ class _Row5State extends State<Row5> {
                       SizedBox(
                         height: 15,
                       ),
-                      SelectableText(
+                      Container(width: 900, child: SelectableText(
                         'Unsere Web-App ist ständig im Umbruch und wir benötigen deine Hilfe, um unsere Features zu testen.'
                             ' Hinterlasse hier deine E-Mail Adresse, um zun den ertsen USern gehören zu können. Damit hilfst'
                             ' du uns beim Testen un der Entwicklung neuer Features. Wir freuen uns von dir zu hören.',
                         style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 20,
                           decoration: TextDecoration.none,
-                          color: my_blue,
+                          color: Colors.white,
                           fontFamily: 'Segoe',
                         ),
-                      ),
-                      SizedBox(height: 30,),
-                      Row(
+                      )),
+                      SizedBox(height: 20),
+                      Container(
+                        width: 500, 
+                        child:Row(
                         children: [
                           Expanded(
                             flex: 2,
@@ -97,7 +92,7 @@ class _Row5State extends State<Row5> {
                                             color: my_pink,
                                           ),
                                           borderRadius:
-                                              BorderRadius.circular(10.0),
+                                              BorderRadius.circular(2.0),
                                         ),
                                         hintText: 'Deine Email...',
                                         hintStyle: TextStyle(
@@ -107,7 +102,7 @@ class _Row5State extends State<Row5> {
                                             borderSide:
                                                 BorderSide(color: my_pink),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(20))),
+                                                Radius.circular(2))),
                                         labelStyle: TextStyle(
                                           color: Colors.white,
                                         )),
@@ -128,18 +123,18 @@ class _Row5State extends State<Row5> {
                               ),
                             ),
                           ),
-                          SizedBox(width: 30,),
+                          SizedBox(width: 1,),
                           Expanded(
                             flex: 1,
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(5.0),
                               child: SizedBox(
                                 width: double.maxFinite,
-                                height: 50,
+                                height: 59,
                                 child: RaisedButton(
                                   color: my_blue,
                                   shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18.0),
+                                    borderRadius: BorderRadius.circular(2.0),
                                     //side: BorderSide(color: Colors.red),
                                   ),
                                   onPressed: () async {
@@ -167,6 +162,8 @@ class _Row5State extends State<Row5> {
                           )
                         ],
                       )
+                      )
+                      
                     ],
                   ),
                 ),

@@ -15,7 +15,7 @@ class Row2 extends StatelessWidget {
             Expanded(
               flex: 1,
               child: Padding(
-                padding: const EdgeInsets.all(80),
+                padding: const EdgeInsets.only(left:250, top: 180),
                 child: Container(
                   //alignment: Alignment.centerRight,
                   child: Column(
@@ -26,12 +26,12 @@ class Row2 extends StatelessWidget {
                         style: TextStyle(
                             shadows: <Shadow>[
                               Shadow(
-                                offset: Offset(2.0, 2.0),
-                                blurRadius: 5.0,
+                                offset: Offset(0, 0),
+                                blurRadius: 0,
                                 color: my_pink,
                               ),
                             ],
-                            fontSize: 35,
+                            fontSize: 40,
                             decoration: TextDecoration.none,
                             color: my_pink,
                             fontFamily: 'Segoe',
@@ -43,9 +43,9 @@ class Row2 extends StatelessWidget {
                         'offen oder triff weite Beschränkungen. Nutze den QR Code oder den Link um deine Freunde'
                         'einzuladen.',
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 20,
                           decoration: TextDecoration.none,
-                          color: my_blue,
+                          color: Colors.white,
                           fontFamily: 'Segoe',
                         ),
                       ),
@@ -61,6 +61,7 @@ class Row2 extends StatelessWidget {
                 child: ConstrainedBox(
                   constraints: BoxConstraints(maxHeight:380, maxWidth:380),
                   child: Container(
+                    margin: EdgeInsets.only(right: 100),
                       child: Image.asset(
                         smartphone_1,
                       )),

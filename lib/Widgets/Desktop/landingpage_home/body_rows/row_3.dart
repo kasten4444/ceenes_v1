@@ -20,6 +20,7 @@ class Row3 extends StatelessWidget {
                 child: ConstrainedBox(
                   constraints: BoxConstraints(maxHeight:380, maxWidth:380),
                   child: Container(
+                    margin: const EdgeInsets.only(left: 100),
                       child: Image.asset(
                         smartphone_2,
                       )),
@@ -29,7 +30,7 @@ class Row3 extends StatelessWidget {
             Expanded(
               flex: 1,
               child: Padding(
-                padding: const EdgeInsets.all(80),
+                padding: const EdgeInsets.only(right:250, top:180),
                 child: Container(
                   //alignment: Alignment.centerRight,
                   child: Column(
@@ -38,14 +39,7 @@ class Row3 extends StatelessWidget {
                       SelectableText(
                         '2. START SWIPING',
                         style: TextStyle(
-                            shadows: <Shadow>[
-                              Shadow(
-                                offset: Offset(2.0, 2.0),
-                                blurRadius: 5.0,
-                                color: my_pink,
-                              ),
-                            ],
-                            fontSize: 35,
+                            fontSize: 45,
                             decoration: TextDecoration.none,
                             color: my_pink,
                             fontFamily: 'Segoe',
@@ -56,9 +50,9 @@ class Row3 extends StatelessWidget {
                         'Jeder hat jeder deiner Freunde einen Link bekommen und kann anfangen zu swipen. Bewerte jeden'
                             'Film, sodass ihr am Ende ein Ranking habt, welcher Film von den meisten geschaut werden will.',
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 20,
                           decoration: TextDecoration.none,
-                          color: my_blue,
+                          color: Colors.white,
                           fontFamily: 'Segoe',
                         ),
                       ),

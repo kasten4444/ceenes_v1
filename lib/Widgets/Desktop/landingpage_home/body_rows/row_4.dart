@@ -15,7 +15,7 @@ class Row4 extends StatelessWidget {
             Expanded(
               flex: 1,
               child: Padding(
-                padding: const EdgeInsets.all(80),
+                padding: const EdgeInsets.only(left:250, top: 180),
                 child: Container(
                   //alignment: Alignment.centerRight,
                   child: Column(
@@ -24,14 +24,7 @@ class Row4 extends StatelessWidget {
                       SelectableText(
                         '3. REVIEW RANKINGS',
                         style: TextStyle(
-                            shadows: <Shadow>[
-                              Shadow(
-                                offset: Offset(2.0, 2.0),
-                                blurRadius: 5.0,
-                                color: my_pink,
-                              ),
-                            ],
-                            fontSize: 35,
+                            fontSize: 45,
                             decoration: TextDecoration.none,
                             color: my_pink,
                             fontFamily: 'Segoe',
@@ -42,9 +35,9 @@ class Row4 extends StatelessWidget {
                         'Nachdem alle mit dem Swipen fertig sind, schaut ihr euch gemeinsam euer Ranking '
                             'der Filme an. Ihr wisst jetzt, was ihr guccken könnt.',
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 20,
                           decoration: TextDecoration.none,
-                          color: my_blue,
+                          color: Colors.white,
                           fontFamily: 'Segoe',
                         ),
                       ),
@@ -60,6 +53,7 @@ class Row4 extends StatelessWidget {
                 child: ConstrainedBox(
                   constraints: BoxConstraints(maxHeight:380, maxWidth:380),
                   child: Container(
+                    margin: EdgeInsets.only(right: 100),
                       child: Image.asset(
                         smartphone_3,
                       )),

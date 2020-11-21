@@ -52,7 +52,7 @@ class _Row1State extends State<Row1> {
                           'CEENES.',
                           style: TextStyle(
 
-                              fontSize: 120,
+                              fontSize: 100,
                               decoration: TextDecoration.none,
                               color: my_pink,
                               fontFamily: 'Segoe',
@@ -64,7 +64,7 @@ class _Row1State extends State<Row1> {
                         'Wir haben es uns zur Aufgabe gemacht, es zu schaffen, dass du mit '
                             'deinen Freundinnen und Freunden innerhalb von 2 Minuten den perfekten Films findest.',
                         style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 20,
                           decoration: TextDecoration.none,
                           color: Colors.white,
                           fontFamily: 'Segoe',
@@ -94,16 +94,16 @@ class _Row1State extends State<Row1> {
                                             color: my_pink,
                                           ),
                                           borderRadius:
-                                          BorderRadius.circular(10.0),
+                                          BorderRadius.circular(2.0),
                                         ),
-                                        hintText: 'Deine Email...',
+                                        hintText: 'Deine E-Mail...',
                                         hintStyle: TextStyle(
-                                            color: Colors.white.withOpacity(0.75)),
+                                            color: Colors.white.withOpacity(0.80)),
                                         focusedBorder: OutlineInputBorder(
                                             borderSide:
                                             BorderSide(color: my_pink),
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(20))),
+                                                Radius.circular(2))),
                                         labelStyle: TextStyle(
                                           color: Colors.white,
                                         )),
@@ -129,11 +129,11 @@ class _Row1State extends State<Row1> {
                               padding: const EdgeInsets.all(8.0),
                               child: SizedBox(
                                 width: double.maxFinite,
-                                height: 50,
+                                height: 59,
                                 child: RaisedButton(
                                   color: my_blue,
                                   shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18.0),
+                                    borderRadius: BorderRadius.circular(2.0),
                                     //side: BorderSide(color: Colors.red),
                                   ),
                                   onPressed: () async {
@@ -151,7 +151,7 @@ class _Row1State extends State<Row1> {
                                   },
                                   child: Container(
                                     child: Text(
-                                      'Benachrichtige mich!',
+                                      'Senden',
                                       style: TextStyle(color: Colors.white, fontSize: 20),
                                     ),
                                   ),
@@ -173,7 +173,7 @@ class _Row1State extends State<Row1> {
             Expanded(
               flex: 1,
               child: Padding(
-                padding: const EdgeInsets.all(80.0),
+                padding: const EdgeInsets.all(40.0),
                 child: ConstrainedBox(
                   constraints: BoxConstraints(maxHeight: 1500, maxWidth: 1500),
                   child: Container(
