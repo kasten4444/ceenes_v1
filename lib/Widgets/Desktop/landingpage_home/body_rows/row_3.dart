@@ -51,8 +51,8 @@ class Row3 extends StatelessWidget {
                         height: 15,
                       ),
                       SelectableText(
-                        'Jeder hat jeder deiner Freunde einen Link bekommen und kann anfangen zu swipen. Bewerte jeden'
-                        'Film, sodass ihr am Ende ein Ranking habt, welcher Film von den meisten geschaut werden will.',
+                        'Jeder deiner Freunde hat nun einen Link bekommen und kann anfangen zu swipen. Bewerte jeden'
+                        'Film, sodass ihr am Ende ein Ranking habt. Worauf wartet ihr noch?',
                         style: TextStyle(
                           fontSize: 20,
                           decoration: TextDecoration.none,

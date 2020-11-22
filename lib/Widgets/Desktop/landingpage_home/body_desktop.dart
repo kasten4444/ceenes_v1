@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 
 import 'body_rows/row_5.dart';
 import 'body_rows/row_6.dart';
+import 'body_rows/row_x.dart';
 
 class BodyDesktop extends StatefulWidget {
   @override
@@ -28,6 +29,7 @@ class _BodyDesktopState extends State<BodyDesktop> {
             Row4(),
             Row5(),
             Row6(),
+            RowX(),
           ]),
         ),
       ),

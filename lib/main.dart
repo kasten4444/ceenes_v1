@@ -89,12 +89,12 @@ class _MyHomePageState extends State<MyHomePage> {
             controller: _controller,
             children: [BodyResponsive()],
           ),
-          scrollbarAnimationDuration: Duration(milliseconds: 500),
+          scrollbarAnimationDuration: Duration(seconds: 1),
           alwaysVisibleScrollThumb: false,
           heightScrollThumb: 150,
-          backgroundColor: my_pink,
+          backgroundColor: my_pink.withOpacity(0.8),
           padding: EdgeInsets.only(right: 8),
-          scrollbarTimeToFade: Duration(milliseconds: 1500) ,
+          scrollbarTimeToFade: Duration(seconds: 2) ,
 
 
         ),

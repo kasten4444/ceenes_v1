@@ -1,50 +1,95 @@
-import 'package:ceenes/Widgets/Desktop/privacy_policy_route/privacy_policy_route.dart';
+import 'package:ceenes/assets/Styles/Colors/colors.dart';
+import 'package:ceenes/assets/Styles/Icons/my_icons.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:ceenes/assets/Styles/Colors/colors.dart';
-import 'package:ceenes/assets/Styles/Icons/my_icons.dart';
+class Row6 extends StatefulWidget {
+  @override
+  _Row6State createState() => _Row6State();
+}
 
-import '../../../utils/header_button.dart';
-
-class Row6 extends StatelessWidget {
+class _Row6State extends State<Row6> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: my_pink,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: Container(
-              child: Image.asset(icon_pink),
-              height: 40,
-              decoration: BoxDecoration(boxShadow: [
-                BoxShadow(color: my_pink, blurRadius: 5, offset: Offset(2, 2))
-              ]),
+      child: Center(
+        child: Column(
+          //crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SelectableText(
+              'ABOUT US.',
+              style: TextStyle(
+                  fontSize: 45,
+                  decoration: TextDecoration.none,
+                  color: my_pink,
+                  fontFamily: 'Segoe',
+                  fontWeight: FontWeight.bold),
             ),
-          ),
-          HeaderButton('ABOUT US'),
-          HeaderButton('CONTACT US'),
-          TextButton(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'DATENSCHUTZ',
-                style: TextStyle(
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+                width: 900,
+                child: SelectableText(
+                  'Wir sind zwei Wirtschaftsinformatikstudenten der Universität Paderborn. '
+                  'Wir wollen mit diesem Projekt den Freiraum, den uns die der Lehrstuhl für Digitale Märkte'
+                  'anbietet, nutzen, und unserer Kreativität freien Lauf lassen.\n'
+                  'Deshalb danken wir insbesondere Frau Seutter und Herrn Kundisch, die uns tatkräfitg zur Seite stehen '
+                  'und bei der Umsetzung dieses Projekt unterstützen.\n'
+                      'Für Kontaktanfragen sendet uns bitte eine Mail an ceenes.app@gmail.com',
+                  style: TextStyle(
+                    fontSize: 20,
+                    decoration: TextDecoration.none,
                     color: Colors.white,
                     fontFamily: 'Segoe',
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold),
+                  ),
+                )),
+            SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 150),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  //profil Loro
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Image.asset(profil_loro),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          'Lorenz P.',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 16,),
+                  //Profil benji
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Image.asset(profil_benji),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          'Benjamin K.',
+                          style: TextStyle(color: Colors.white),
+                        )
+                      ],
+                    ),
+                  )
+                ],
               ),
-            ),
-            onPressed: () {
-              Navigator.push(context,
-              MaterialPageRoute(builder: (context) => PrivacyPolicy_Route()));
-            },
-          ),
-        ],
+            )
+          ],
+        ),
       ),
     );
   }

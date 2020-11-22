@@ -22,7 +22,6 @@ class Row2 extends StatelessWidget {
                 child: Container(
                   //color: Colors.green,
                   child: Column(
-
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -40,8 +39,8 @@ class Row2 extends StatelessWidget {
                       ),
                       SelectableText(
                         'Erstell eine Gruppe und lade deine Freunde ein. Lass alle Möglichkeiten'
-                        'offen oder triff weitere Beschränkungen. Nutze den QR Code oder den Link um '
-                            'deine Freunde'
+                        'offen oder triff weitere Filter. Nutze den QR Code oder den Link um '
+                        'deine Freunde'
                         'einzuladen.',
                         style: TextStyle(
                           fontSize: 20,
