@@ -27,9 +27,9 @@ class Row2 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SelectableText(
-                        '1. CREATE A GROUP',
+                        'CEENES',
                         style: TextStyle(
-                            fontSize: 40,
+                            fontSize: 100,
                             decoration: TextDecoration.none,
                             color: my_pink,
                             fontFamily: 'Segoe',

@@ -6,12 +6,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
-class Row1 extends StatefulWidget {
+class Part1 extends StatefulWidget {
   @override
-  _Row1State createState() => _Row1State();
+  _Part1State createState() => _Part1State();
 }
 
-class _Row1State extends State<Row1> {
+class _Part1State extends State<Part1> {
   final myController = TextEditingController();
   //final _height = 40;
   bool _autovalidate = false;
@@ -33,7 +33,8 @@ class _Row1State extends State<Row1> {
       child: Container(
         //color: Colors.green,
         height: MediaQuery. of(context). size. height,
-        child: Row(
+        child:
+        /*Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Expanded(
@@ -46,19 +47,7 @@ class _Row1State extends State<Row1> {
                     mainAxisAlignment:  MainAxisAlignment.center,
                     //crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: SelectableText(
-                          'CEENES.',
-                          style: TextStyle(
-
-                              fontSize: 100,
-                              decoration: TextDecoration.none,
-                              color: my_pink,
-                              fontFamily: 'Segoe',
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
+                      
                       SizedBox(height: 30,),
                       SelectableText(
                         'Wir haben es uns zur Aufgabe gemacht, es zu schaffen, dass du mit '
@@ -187,8 +176,157 @@ class _Row1State extends State<Row1> {
               ),
             )
           ],
-        ),
-      ),
-    );
+        ),*/
+        Container(
+          padding: const EdgeInsets.all(8),
+          child:        Column(
+          children:[
+        Padding(
+          padding: const EdgeInsets.only(left:20, top:70),
+          child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: SelectableText(
+                          'CEENES.',
+                          style: TextStyle(
+                              fontSize: 70,
+                              decoration: TextDecoration.none,
+                              color: my_pink,
+                              fontFamily: 'Segoe',
+                              fontWeight: FontWeight.bold),
+                        ),
+                    ),
+          ),
+          Row(children:[
+            Expanded(flex:1,
+            child:Container(padding: EdgeInsets.all(20),
+              child: SelectableText(
+                          'Film. Swipe. Friends.',
+                          style: TextStyle(
+                              fontSize: 15,
+                              decoration: TextDecoration.none,
+                              color: Colors.white,
+                              fontFamily: 'Segoe',
+                              fontWeight: FontWeight.normal,
+                        ),)))
+            ,
+            Expanded(flex:2,
+            child:Align(alignment: Alignment.centerRight ,
+          child: Padding(
+                padding: const EdgeInsets.all(25),
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(maxHeight: 250,maxWidth: 250),
+                  child: Container(
+                    //color: Colors.grey,
+                    child: Image.asset(
+                      frau_im_sessel,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ),
+               ),)
+          )
+          ]),
+          Container(
+            padding: const EdgeInsets.all(20),
+            child:Row(
+              children: [
+            Expanded(
+                            flex: 2,
+                            child: Form(
+                              key: _formKey,
+                              autovalidate: _autovalidate,
+                              child:Column(
+                                children: [
+                                  ConstrainedBox(
+                                    constraints: BoxConstraints(maxHeight: 40),
+                                    child:TextFormField(
+                                    decoration: InputDecoration(
+                                        errorMaxLines: 4,
+                                        errorStyle:
+                                        TextStyle(color: Colors.white),
+                                        filled: true,
+                                        fillColor: my_pink,
+                                        //labelText: 'Email',
+                                        enabledBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: my_pink,
+                                          ),
+                                          borderRadius:
+                                          BorderRadius.circular(2.0),
+                                        ),
+                                        hintText: 'Deine E-Mail...',
+                                        hintStyle: TextStyle(
+                                          fontSize: 17,
+                                            color: Colors.white.withOpacity(0.80)),
+                                        focusedBorder: OutlineInputBorder(
+                                            borderSide:
+                                            BorderSide(color: my_pink),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(2))),
+                                        labelStyle: TextStyle(
+                                          color: Colors.white,
+                                        )),
+
+                                    //obscureText: true,
+                                    style:
+                                    TextStyle(color: Colors.white, fontSize: 20),
+                                    validator: (input) {
+                                      if (input.isEmpty | !EmailValidator.validate(input)) {
+                                        return 'Bitte gebe eine gültige Email Adresse an';
+                                      }
+                                      return null;
+                                    },
+                                    controller: myController,
+                                  ),),
+                                ],
+                              ),
+                            ),
+                          ),
+            
+                        
+                          Expanded(
+                            flex: 1,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: SizedBox(
+                                width: double.maxFinite,
+                                height: 40,
+                                child: RaisedButton(
+                                  color: my_blue,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(2.0),
+                                    //side: BorderSide(color: Colors.red),
+                                  ),
+                                  onPressed: () async {
+                                    String email = myController.text;
+                                    print(email);
+                                    if (_formKey.currentState.validate()) {
+                                      firestore
+                                          .collection("emails")
+                                          .add({"email": email});
+                                    } else{
+                                      setState(() {
+                                        _autovalidate = true;
+                                      });
+                                    }
+                                  },
+                                  child: Container(
+                                    child: Text(
+                                      'Senden',
+                                      style: TextStyle(color: Colors.white, fontSize: 15),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          )
+          ],),),
+          
+          
+         
+          ]
+      ))
+      )
+      );
   }
 }

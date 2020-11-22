@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import 'Desktop/landingpage_home/header_desktop.dart';
+import 'Mobil/header_mobil.dart';
+
 
 class HeaderResponsive extends StatelessWidget {
   @override
@@ -14,10 +16,7 @@ class HeaderResponsive extends StatelessWidget {
           return HeaderDesktop();
         }
         if (sizingInformation.deviceScreenType == DeviceScreenType.mobile){
-          return Container(
-            color: Colors.blue,
-            child: Text("Mobil"),
-          );
+          return HeaderMobil();
         }
 
         if (sizingInformation.deviceScreenType == DeviceScreenType.tablet) {
