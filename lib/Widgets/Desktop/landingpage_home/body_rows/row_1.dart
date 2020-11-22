@@ -32,7 +32,7 @@ class _Row1State extends State<Row1> {
     return Center(
       child: Container(
         //color: Colors.green,
-        height: MediaQuery. of(context). size. height,
+        height: MediaQuery. of(context). size. height - 100,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
