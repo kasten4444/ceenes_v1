@@ -184,6 +184,13 @@
             </list>
           </value>
         </entry>
+        <entry key="draggable_scrollbar">
+          <value>
+            <list>
+              <option value="C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/draggable_scrollbar-0.0.4/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="email_validator">
           <value>
             <list>
@@ -612,6 +619,7 @@
       <root url="file://C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-2.1.5/lib" />
       <root url="file://C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/css_colors-1.0.2/lib" />
       <root url="file://C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/csslib-0.16.2/lib" />
+      <root url="file://C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/draggable_scrollbar-0.0.4/lib" />
       <root url="file://C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/email_validator-1.0.6/lib" />
       <root url="file://C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0-nullsafety.1/lib" />
       <root url="file://C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.5.2/lib" />

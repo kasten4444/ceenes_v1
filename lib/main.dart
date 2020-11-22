@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:draggable_scrollbar/draggable_scrollbar.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import 'Widgets/body_responsive.dart';
@@ -12,8 +13,7 @@ import 'Widgets/header_responsive.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-
-void main() async{
+void main() async {
   runApp(MyApp());
 }
 
@@ -35,22 +35,24 @@ class _MyAppState extends State<MyApp> {
       setState(() {
         _initialized = true;
       });
-    } catch(e) {
+    } catch (e) {
       // Set `_error` state to true if Firebase initialization fails
       setState(() {
         _error = true;
       });
     }
   }
+
   @override
   void initState() {
     initializeFlutterFire();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     // Show error message if initialization failed
-    if(_error) {
+    if (_error) {
       print('error');
     }
 
@@ -69,20 +71,37 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  ScrollController _controller = ScrollController();
+
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        ListView(
-          children: [
-            BodyResponsive()
-          ],
+        DraggableScrollbar.rrect(
+          controller: _controller,
+          child: ListView(
+            controller: _controller,
+            children: [BodyResponsive()],
+          ),
+          scrollbarAnimationDuration: Duration(milliseconds: 500),
+          alwaysVisibleScrollThumb: false,
+          heightScrollThumb: 150,
+          backgroundColor: my_pink,
+          padding: EdgeInsets.only(right: 8),
+          scrollbarTimeToFade: Duration(milliseconds: 1500) ,
+
+
         ),
         Align(
           alignment: Alignment.topCenter,
           child: HeaderResponsive(),
-        )
+        ),
       ],
     );
   }
