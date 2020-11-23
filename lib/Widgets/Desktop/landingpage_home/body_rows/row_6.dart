@@ -34,7 +34,7 @@ class _Row6State extends State<Row6> {
                 width: 900,
                 child: SelectableText(
                   'Wir sind zwei Wirtschaftsinformatikstudenten der Universität Paderborn. '
-                  'Wir wollen mit diesem Projekt den Freiraum, den uns die der Lehrstuhl für Digitale Märkte'
+                  'Wir wollen mit diesem Projekt den Freiraum, den uns die der Lehrstuhl für Digitale Märkte '
                   'anbietet, nutzen, und unserer Kreativität freien Lauf lassen.\n'
                   'Deshalb danken wir insbesondere Frau Seutter und Herrn Kundisch, die uns tatkräfitg zur Seite stehen '
                   'und bei der Umsetzung dieses Projekt unterstützen.\n'
