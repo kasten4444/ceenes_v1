@@ -1,9 +1,9 @@
-import 'package:ceenes/Widgets/Tablet/header_tablet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import 'Desktop/landingpage_home/header_desktop.dart';
+import 'Tablet/landingpage_home/header_tablet.dart';
 
 class HeaderResponsive extends StatelessWidget {
   @override

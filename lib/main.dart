@@ -81,28 +81,30 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        DraggableScrollbar.rrect(
-          controller: _controller,
-          child: ListView(
+    return Material(
+      child: Stack(
+        children: [
+          DraggableScrollbar.rrect(
             controller: _controller,
-            children: [BodyResponsive()],
+            child: ListView(
+              controller: _controller,
+              children: [BodyResponsive()],
+            ),
+            scrollbarAnimationDuration: Duration(seconds: 1),
+            alwaysVisibleScrollThumb: false,
+            heightScrollThumb: 150,
+            backgroundColor: my_pink.withOpacity(0.8),
+            padding: EdgeInsets.only(right: 8),
+            scrollbarTimeToFade: Duration(seconds: 2) ,
+
+
           ),
-          scrollbarAnimationDuration: Duration(seconds: 1),
-          alwaysVisibleScrollThumb: false,
-          heightScrollThumb: 150,
-          backgroundColor: my_pink.withOpacity(0.8),
-          padding: EdgeInsets.only(right: 8),
-          scrollbarTimeToFade: Duration(seconds: 2) ,
-
-
-        ),
-        Align(
-          alignment: Alignment.topCenter,
-          child: HeaderResponsive(),
-        ),
-      ],
+          Align(
+            alignment: Alignment.topCenter,
+            child: HeaderResponsive(),
+          ),
+        ],
+      ),
     );
   }
 }
