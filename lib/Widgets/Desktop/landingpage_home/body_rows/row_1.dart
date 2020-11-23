@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:toast/toast.dart';
 
 
 class Row1 extends StatefulWidget {
@@ -148,6 +149,17 @@ class _Row1State extends State<Row1> {
                                           firestore
                                               .collection("emails")
                                               .add({"email": email});
+                                          Toast.show(
+                                            "Du wurdest erfolgreich hinzugefügt",
+                                            context,
+
+                                            duration: 2,
+                                            gravity: Toast.TOP,
+
+                                            backgroundColor: my_pink,
+                                            textColor: Colors.white,
+
+                                          );
                                         } else{
                                           setState(() {
                                             _autovalidate = true;
