@@ -78,7 +78,7 @@ class _Row5_TabletState extends State<Row5_Tablet> {
                         child: Row(
                           children: [
                             Expanded(
-                              flex: 2,
+                              flex: 4,
                               child: Form(
                                 key: _formKey,
                                 autovalidate: _autovalidate,
@@ -165,24 +165,10 @@ class _Row5_TabletState extends State<Row5_Tablet> {
                                         });
                                       }
                                     },
-                                    child: Container(
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                        children: [
-                                          Icon(
-                                            Icons.email_outlined,
-                                            color: Colors.white,
-                                            size: 30,
-                                          ),
-                                          //SizedBox(width: 5,),
-                                          Text(
-                                            'Senden',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 20),
-                                          ),
-                                        ],
-                                      ),
+                                    child: Icon(
+                                      Icons.email_outlined,
+                                      color: Colors.white,
+                                      size: 30,
                                     ),
                                   ),
                                 ),

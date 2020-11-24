@@ -204,7 +204,7 @@ class _Row1State extends State<Row1> {
                 Expanded(
                   flex: 1,
                   child: Padding(
-                    padding: const EdgeInsets.all(40.0),
+                    padding: const EdgeInsets.all(80.0),
                     child: ConstrainedBox(
                       constraints:
                           BoxConstraints(maxHeight: 1500, maxWidth: 1500),
