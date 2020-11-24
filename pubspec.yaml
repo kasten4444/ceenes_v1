@@ -18,6 +18,16 @@ dependencies:
   firebase_core: "0.5.2"
   cloud_firestore: "^0.14.3"
   email_validator: '^1.0.5'
+  flutter_html: "^1.0.0"
+  draggable_scrollbar: ^0.0.4
+  scrollable_positioned_list: ^0.1.8
+  toast: ^0.1.5
+
+
+
+
+
+
 
 
 

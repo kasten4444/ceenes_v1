@@ -12,7 +12,6 @@ class BodyResponsive extends StatelessWidget {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) {
         if (sizingInformation.deviceScreenType == DeviceScreenType.desktop) {
-
           return BodyDesktop();
         }
         if (sizingInformation.deviceScreenType == DeviceScreenType.mobile) {

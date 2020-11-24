@@ -1,3 +1,4 @@
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:ceenes/assets/Styles/Colors/colors.dart';
@@ -23,12 +24,7 @@ class HeaderButton extends StatelessWidget {
         ),
       ),
       onPressed: () {},
-      //splashColor: my_pink,
-      /*
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10))
 
-         */
     );
   }
 }

@@ -8,7 +8,7 @@ class Row4 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        height: MediaQuery.of(context).size.height,
+        height: MediaQuery.of(context).size.height - 100,
         child: Row(
           children: [
             Expanded(
@@ -37,7 +37,7 @@ class Row4 extends StatelessWidget {
                       ),
                       SelectableText(
                         'Nachdem alle mit dem Swipen fertig sind, schaut ihr euch gemeinsam euer Ranking '
-                        'der Filme an. Ihr wisst jetzt, was ihr guccken könnt.',
+                        'der Filme an. Ihr wisst jetzt, was ihr gucken könnt.',
                         style: TextStyle(
                           fontSize: 20,
                           decoration: TextDecoration.none,
