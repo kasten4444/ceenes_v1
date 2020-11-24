@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import 'Desktop/landingpage_home/body_desktop.dart';
+import 'Mobil/body_mobil.dart';
 
 class BodyResponsive extends StatelessWidget {
 
@@ -16,10 +17,7 @@ class BodyResponsive extends StatelessWidget {
           return BodyDesktop();
         }
         if (sizingInformation.deviceScreenType == DeviceScreenType.mobile) {
-          return Container(
-            color: Colors.blue,
-            child: Text("Body Mobil"),
-          );
+          return BodyMobil();
         }
 
         if (sizingInformation.deviceScreenType == DeviceScreenType.tablet) {
