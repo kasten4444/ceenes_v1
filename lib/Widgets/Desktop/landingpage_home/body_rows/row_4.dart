@@ -8,7 +8,7 @@ class Row4 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        height: MediaQuery.of(context).size.height,
+        height: MediaQuery.of(context).size.height - 100,
         child: Row(
           children: [
             Expanded(
