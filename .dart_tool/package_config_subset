@@ -10,6 +10,10 @@ analyzer
 2.7
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/analyzer-0.40.6/
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/analyzer-0.40.6/lib/
+animated_text_kit
+2.0
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/animated_text_kit-2.5.4/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/animated_text_kit-2.5.4/lib/
 archive
 2.0
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/archive-2.0.13/
@@ -22,6 +26,10 @@ async
 2.10
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.5.0-nullsafety.1/
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.5.0-nullsafety.1/lib/
+auto_size_text
+2.0
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/auto_size_text-2.1.0/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/auto_size_text-2.1.0/lib/
 bazel_worker
 2.3
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/bazel_worker-0.1.25/

@@ -22,6 +22,8 @@ dependencies:
   draggable_scrollbar: ^0.0.4
   scrollable_positioned_list: ^0.1.8
   toast: ^0.1.5
+  animated_text_kit: ^2.5.4
+  auto_size_text: ^2.1.0
 
 
 

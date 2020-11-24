@@ -1,3 +1,5 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:ceenes/assets/Styles/Colors/colors.dart';
 import 'package:ceenes/assets/Styles/Icons/my_icons.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -6,7 +8,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
-
 class Row1 extends StatefulWidget {
   @override
   _Row1State createState() => _Row1State();
@@ -14,6 +15,7 @@ class Row1 extends StatefulWidget {
 
 class _Row1State extends State<Row1> {
   final myController = TextEditingController();
+
   //final _height = 40;
   bool _autovalidate = false;
 
@@ -27,16 +29,17 @@ class _Row1State extends State<Row1> {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   final _formKey = GlobalKey<FormState>();
 
-
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 50,),
+        SizedBox(
+          height: 150,
+        ),
         Center(
           child: Container(
             //color: Colors.green,
-            height: MediaQuery. of(context). size. height - 150 ,
+            //height: MediaQuery.of(context).size.height,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -47,28 +50,41 @@ class _Row1State extends State<Row1> {
                     child: Container(
                       //color: Colors.green,
                       child: Column(
-                        mainAxisAlignment:  MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         //crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Align(
                             alignment: Alignment.centerLeft,
-                            child: SelectableText(
-                              'CEENES.',
-                              style: TextStyle(
-
+                            child: TypewriterAnimatedTextKit(
+                              onTap: () {
+                                print("Tap Event");
+                              },
+                              text: ["CEENES"],
+                              textStyle: TextStyle(
                                   fontSize: 100,
                                   decoration: TextDecoration.none,
                                   color: my_pink,
                                   fontFamily: 'Segoe',
                                   fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.start,
+                              alignment: AlignmentDirectional.topStart,
+                              speed: Duration(milliseconds: 700),
+                              isRepeatingAnimation: true,
+                              repeatForever: true,
+                              displayFullTextOnTap: true,
+
+                              // or Alignment.topLeft
                             ),
                           ),
-                          SizedBox(height: 30,),
-                          SelectableText(
+
+                          SizedBox(
+                            height: 30,
+                          ),
+                          AutoSizeText(
                             'Wir haben es uns zur Aufgabe gemacht, es zu schaffen, dass du mit '
-                                'deinen Freundinnen und Freunden innerhalb von 2 Minuten den perfekten Films findest.\n'
-                                'Lass uns deine Email da und sei einer der Ersten!'
-                                '',
+                            'deinen Freundinnen und Freunden innerhalb von 2 Minuten den perfekten Films findest.\n'
+                            'Lass uns deine Email da und sei einer der Ersten!'
+                            '',
                             style: TextStyle(
                               fontSize: 20,
                               decoration: TextDecoration.none,
@@ -76,12 +92,14 @@ class _Row1State extends State<Row1> {
                               fontFamily: 'Segoe',
                             ),
                           ),
-                          SizedBox(height: 30,),
+                          SizedBox(
+                            height: 30,
+                          ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Expanded(
-                                flex: 2,
+                                flex: 4,
                                 child: Form(
                                   key: _formKey,
                                   autovalidate: _autovalidate,
@@ -91,7 +109,7 @@ class _Row1State extends State<Row1> {
                                         decoration: InputDecoration(
                                             errorMaxLines: 4,
                                             errorStyle:
-                                            TextStyle(color: Colors.white),
+                                                TextStyle(color: Colors.white),
                                             filled: true,
                                             fillColor: my_pink,
                                             //labelText: 'Email',
@@ -100,14 +118,15 @@ class _Row1State extends State<Row1> {
                                                 color: my_pink,
                                               ),
                                               borderRadius:
-                                              BorderRadius.circular(2.0),
+                                                  BorderRadius.circular(2.0),
                                             ),
                                             hintText: 'Deine E-Mail...',
                                             hintStyle: TextStyle(
-                                                color: Colors.white.withOpacity(0.80)),
+                                                color: Colors.white
+                                                    .withOpacity(0.80)),
                                             focusedBorder: OutlineInputBorder(
                                                 borderSide:
-                                                BorderSide(color: my_pink),
+                                                    BorderSide(color: my_pink),
                                                 borderRadius: BorderRadius.all(
                                                     Radius.circular(2))),
                                             labelStyle: TextStyle(
@@ -115,10 +134,11 @@ class _Row1State extends State<Row1> {
                                             )),
 
                                         //obscureText: true,
-                                        style:
-                                        TextStyle(color: Colors.white, fontSize: 20),
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 20),
                                         validator: (input) {
-                                          if (input.isEmpty | !EmailValidator.validate(input)) {
+                                          if (input.isEmpty |
+                                              !EmailValidator.validate(input)) {
                                             return 'Bitte gebe eine gültige Email Adresse an';
                                           }
                                           return null;
@@ -139,7 +159,8 @@ class _Row1State extends State<Row1> {
                                     child: RaisedButton(
                                       color: my_blue,
                                       shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(2.0),
+                                        borderRadius:
+                                            BorderRadius.circular(2.0),
                                         //side: BorderSide(color: Colors.red),
                                       ),
                                       onPressed: () async {
@@ -152,36 +173,29 @@ class _Row1State extends State<Row1> {
                                           Toast.show(
                                             "Du wurdest erfolgreich hinzugefügt",
                                             context,
-
                                             duration: 2,
                                             gravity: Toast.TOP,
-
                                             backgroundColor: my_pink,
                                             textColor: Colors.white,
-
                                           );
-                                        } else{
+                                        } else {
                                           setState(() {
                                             _autovalidate = true;
                                           });
                                         }
                                       },
-                                      child: Container(
-                                        child: Text(
-                                          'Senden',
-                                          style: TextStyle(color: Colors.white, fontSize: 20),
-                                        ),
+                                      child: Icon(
+                                        Icons.email_outlined,
+                                        color: Colors.white,
+                                        size: 30,
                                       ),
                                     ),
                                   ),
                                 ),
                               )
-
                             ],
                           )
                           //Kontakt Email Feld
-
-
                         ],
                       ),
                     ),
@@ -192,12 +206,13 @@ class _Row1State extends State<Row1> {
                   child: Padding(
                     padding: const EdgeInsets.all(40.0),
                     child: ConstrainedBox(
-                      constraints: BoxConstraints(maxHeight: 1500, maxWidth: 1500),
+                      constraints:
+                          BoxConstraints(maxHeight: 1500, maxWidth: 1500),
                       child: Container(
                         //color: Colors.grey,
                         child: Image.asset(
                           zwei_auf_dem_sofa,
-                          fit: BoxFit.fill,
+                          fit: BoxFit.contain,
                         ),
                       ),
                     ),

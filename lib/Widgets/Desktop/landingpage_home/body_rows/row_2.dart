@@ -8,7 +8,7 @@ class Row2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        height: MediaQuery.of(context).size.height - 100,
+        height: MediaQuery.of(context).size.height,
         //color: Colors.grey,
         child: Row(
           //mainAxisAlignment: MainAxisAlignment.spaceBetween,

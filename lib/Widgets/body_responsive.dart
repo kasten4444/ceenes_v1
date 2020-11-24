@@ -6,9 +6,11 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'Desktop/landingpage_home/body_desktop.dart';
 
 class BodyResponsive extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
+
       builder: (context, sizingInformation) {
         if (sizingInformation.deviceScreenType == DeviceScreenType.desktop) {
           return BodyDesktop();

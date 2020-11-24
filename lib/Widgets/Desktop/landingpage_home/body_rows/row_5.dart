@@ -79,7 +79,7 @@ class _Row5State extends State<Row5> {
                         child: Row(
                           children: [
                             Expanded(
-                              flex: 2,
+                              flex: 4,
                               child: Form(
                                 key: _formKey,
                                 autovalidate: _autovalidate,
@@ -170,12 +170,10 @@ class _Row5State extends State<Row5> {
                                         });
                                       }
                                     },
-                                    child: Container(
-                                      child: Text(
-                                        'Senden',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 20),
-                                      ),
+                                    child: Icon(
+                                      Icons.email_outlined,
+                                      color: Colors.white,
+                                      size: 30,
                                     ),
                                   ),
                                 ),
