@@ -14,6 +14,7 @@ import 'Widgets/header_responsive.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
@@ -84,21 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Material(
       child: Stack(
         children: [
-          DraggableScrollbar.rrect(
-            controller: _controller,
-            child: ListView(
-              controller: _controller,
-              children: [BodyResponsive()],
-            ),
-            scrollbarAnimationDuration: Duration(seconds: 1),
-            alwaysVisibleScrollThumb: false,
-            heightScrollThumb: 150,
-            backgroundColor: my_pink.withOpacity(0.8),
-            padding: EdgeInsets.only(right: 8),
-            scrollbarTimeToFade: Duration(seconds: 2) ,
-
-
-          ),
+          BodyResponsive(),
           Align(
             alignment: Alignment.topCenter,
             child: HeaderResponsive(),

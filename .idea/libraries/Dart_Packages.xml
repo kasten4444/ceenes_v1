@@ -478,6 +478,13 @@
             </list>
           </value>
         </entry>
+        <entry key="scroll_to_index">
+          <value>
+            <list>
+              <option value="C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/scroll_to_index-1.0.6/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="scrollable_positioned_list">
           <value>
             <list>
@@ -686,6 +693,7 @@
       <root url="file://C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/responsive_builder-0.3.0/lib" />
       <root url="file://C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/scratch_space-0.0.4+2/lib" />
       <root url="file://C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/screen-0.0.5/lib" />
+      <root url="file://C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/scroll_to_index-1.0.6/lib" />
       <root url="file://C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/scrollable_positioned_list-0.1.8/lib" />
       <root url="file://C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/source_maps-0.10.9/lib" />
       <root url="file://C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.0-nullsafety.2/lib" />

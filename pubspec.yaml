@@ -24,6 +24,8 @@ dependencies:
   toast: ^0.1.5
   animated_text_kit: ^2.5.4
   auto_size_text: ^2.1.0
+  scroll_to_index: any
+
 
 
 

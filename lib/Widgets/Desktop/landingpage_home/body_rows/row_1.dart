@@ -194,7 +194,8 @@ class _Row1State extends State<Row1> {
                                 ),
                               )
                             ],
-                          )
+                          ),
+
                           //Kontakt Email Feld
                         ],
                       ),
@@ -220,6 +221,24 @@ class _Row1State extends State<Row1> {
                 )
               ],
             ),
+          ),
+        ),
+        Container(
+          //color: Colors.blue,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              GestureDetector(
+                  child: Image.asset(
+                arrow,
+                color: Colors.white,
+              ),
+                onTap: (){
+
+                },
+              )
+            ],
           ),
         ),
       ],
