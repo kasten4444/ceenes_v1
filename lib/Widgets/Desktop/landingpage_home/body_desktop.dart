@@ -19,14 +19,34 @@ class BodyDesktop extends StatefulWidget {
   BodyDesktopState createState() => BodyDesktopState();
 }
 
-class BodyDesktopState extends State<BodyDesktop> {
-  void scroll() {
-    print('gep');
-  }
+final ItemScrollController itemScrollController = ItemScrollController();
+final ItemPositionsListener itemPositionsListener = ItemPositionsListener.create();
 
+class BodyDesktopState extends State<BodyDesktop> {
   var col = [
     Row1(),
-
+    Container(
+      //color: Colors.blue,
+      child: GestureDetector(
+        onTap: () {
+          itemScrollController.scrollTo(
+              index: 2,
+              duration: Duration(seconds: 2),
+              curve: Curves.fastLinearToSlowEaseIn);
+        },
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Text(
+              'So funktioniert\'s',
+              style: TextStyle(color: Colors.white, fontSize: 25),
+            ),
+            Icon(Icons.arrow_downward, color: Colors.white, size: 40,),
+          ],
+        ),
+      ),
+    ),
     Row2(),
     Row3(),
     Row4(),
@@ -45,6 +65,8 @@ class BodyDesktopState extends State<BodyDesktop> {
           itemBuilder: (context, index) {
             return col[index];
           },
+          itemScrollController: itemScrollController,
+          itemPositionsListener: itemPositionsListener,
         ),
       ),
     );

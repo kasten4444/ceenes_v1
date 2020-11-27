@@ -25,7 +25,6 @@ class RowX extends StatelessWidget {
               ]),
             ),
           ),
-          HeaderButton('CONTACT US'),
           TextButton(
             child: Padding(
               padding: const EdgeInsets.all(8.0),

@@ -33,13 +33,10 @@ class _Row1State extends State<Row1> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
-          height: 150,
-        ),
         Center(
           child: Container(
             //color: Colors.green,
-            //height: MediaQuery.of(context).size.height,
+            height: MediaQuery.of(context).size.height - 150,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -61,11 +58,12 @@ class _Row1State extends State<Row1> {
                               },
                               text: ["CEENES"],
                               textStyle: TextStyle(
-                                  fontSize: 100,
+                                  fontSize: 85,
                                   decoration: TextDecoration.none,
                                   color: my_pink,
                                   fontFamily: 'Segoe',
-                                  fontWeight: FontWeight.bold),
+                                  fontWeight: FontWeight.bold,
+                              letterSpacing: 8),
                               textAlign: TextAlign.start,
                               alignment: AlignmentDirectional.topStart,
                               speed: Duration(milliseconds: 700),
@@ -223,24 +221,7 @@ class _Row1State extends State<Row1> {
             ),
           ),
         ),
-        Container(
-          //color: Colors.blue,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              GestureDetector(
-                  child: Image.asset(
-                arrow,
-                color: Colors.white,
-              ),
-                onTap: (){
 
-                },
-              )
-            ],
-          ),
-        ),
       ],
     );
   }
