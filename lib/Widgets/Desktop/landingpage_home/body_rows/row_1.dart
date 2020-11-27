@@ -36,7 +36,7 @@ class _Row1State extends State<Row1> {
         Center(
           child: Container(
             //color: Colors.green,
-            height: MediaQuery.of(context).size.height - 150,
+            height: MediaQuery.of(context).size.height-100,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -66,7 +66,7 @@ class _Row1State extends State<Row1> {
                               letterSpacing: 8),
                               textAlign: TextAlign.start,
                               alignment: AlignmentDirectional.topStart,
-                              speed: Duration(milliseconds: 700),
+                              speed: Duration(milliseconds: 1000),
                               isRepeatingAnimation: true,
                               repeatForever: true,
                               displayFullTextOnTap: true,

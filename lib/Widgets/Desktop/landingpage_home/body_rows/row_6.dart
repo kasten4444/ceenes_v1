@@ -38,11 +38,8 @@ class _Row6State extends State<Row6> {
                     height: 15,
                   ),
                   ConstrainedBox(
-                    constraints: BoxConstraints(
-                      maxWidth: 800
-                    ),
+                    constraints: BoxConstraints(maxWidth: 800),
                     child: SelectableText.rich(
-
                       TextSpan(
                           text:
                               'Wir sind zwei Wirtschaftsinformatikstudenten der Universität Paderborn. '
@@ -56,19 +53,18 @@ class _Row6State extends State<Row6> {
                               fontSize: 20,
                               decoration: TextDecoration.none,
                               fontFamily: 'Segoe'),
-                      children: [
-                        TextSpan(
-                          text: 'ceenes.app@gmail.com',
-                          style: TextStyle(
-                              color: my_pink,
-                              fontSize: 20,
-                              decoration: TextDecoration.none,
-                              fontFamily: 'Segoe'),
-                        )
-                      ]),
+                          children: [
+                            TextSpan(
+                              text: 'ceenes.app@gmail.com',
+                              style: TextStyle(
+                                  color: my_pink,
+                                  fontSize: 20,
+                                  decoration: TextDecoration.none,
+                                  fontFamily: 'Segoe'),
+                            )
+                          ]),
                     ),
                   ),
-
                   SizedBox(height: 20),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 150),
@@ -80,7 +76,10 @@ class _Row6State extends State<Row6> {
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
                             children: [
-                              Image.asset(profil_loro),
+                              CircleAvatar(
+                                backgroundImage: AssetImage(profil_loro),
+                                radius: 100,
+                              ),
                               SizedBox(
                                 height: 8,
                               ),
@@ -92,14 +91,17 @@ class _Row6State extends State<Row6> {
                           ),
                         ),
                         SizedBox(
-                          width: 16,
+                          width: 25,
                         ),
                         //Profil benji
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
                             children: [
-                              Image.asset(profil_benji),
+                              CircleAvatar(
+                                backgroundImage: AssetImage(profil_benji),
+                                radius: 100,
+                              ),
                               SizedBox(
                                 height: 8,
                               ),
