@@ -68,7 +68,9 @@ class _Row1_TabletState extends State<Row1_Tablet> {
                                     decoration: TextDecoration.none,
                                     color: my_pink,
                                     fontFamily: 'Segoe',
-                                    fontWeight: FontWeight.bold),
+                                    fontWeight: FontWeight.bold,
+                                  letterSpacing: 8
+                                ),
                                 textAlign: TextAlign.start,
                                 alignment: AlignmentDirectional.topStart,
                                 speed: Duration(milliseconds: 700),
