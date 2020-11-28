@@ -33,13 +33,10 @@ class _Row1State extends State<Row1> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
-          height: 150,
-        ),
         Center(
           child: Container(
             //color: Colors.green,
-            //height: MediaQuery.of(context).size.height,
+            height: MediaQuery.of(context).size.height-100,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -61,14 +58,15 @@ class _Row1State extends State<Row1> {
                               },
                               text: ["CEENES"],
                               textStyle: TextStyle(
-                                  fontSize: 100,
+                                  fontSize: 85,
                                   decoration: TextDecoration.none,
                                   color: my_pink,
                                   fontFamily: 'Segoe',
-                                  fontWeight: FontWeight.bold),
+                                  fontWeight: FontWeight.bold,
+                              letterSpacing: 8),
                               textAlign: TextAlign.start,
                               alignment: AlignmentDirectional.topStart,
-                              speed: Duration(milliseconds: 700),
+                              speed: Duration(milliseconds: 1000),
                               isRepeatingAnimation: true,
                               repeatForever: true,
                               displayFullTextOnTap: true,
@@ -194,7 +192,8 @@ class _Row1State extends State<Row1> {
                                 ),
                               )
                             ],
-                          )
+                          ),
+
                           //Kontakt Email Feld
                         ],
                       ),
@@ -222,6 +221,7 @@ class _Row1State extends State<Row1> {
             ),
           ),
         ),
+
       ],
     );
   }
