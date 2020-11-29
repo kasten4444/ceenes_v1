@@ -90,7 +90,7 @@ class Part3 extends StatelessWidget {
                 alignment: Alignment.center,
                 //color: Colors.pinkAccent,
                 child: ConstrainedBox(
-                  constraints: BoxConstraints(maxHeight: 300, maxWidth: 450),
+                  constraints: BoxConstraints(maxHeight: 250, maxWidth: 450),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 60),
                     child: Image.asset(
@@ -102,10 +102,7 @@ class Part3 extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(50),
                 child: SelectableText(
-                        'Erstell eine Gruppe und lade deine Freunde ein. Lass alle Möglichkeiten'
-                        'offen oder triff weitere Beschränkungen. Nutze den QR Code oder den Link um '
-                            'deine Freunde'
-                        'einzuladen.',
+                        'Jeder deiner Freunde hat nun einen Link bekommen und kann anfangen zu swipen. Bewerte jeden Film, sodass ihr am Ende ein Ranking habt. Worauf wartet ihr noch?',
                         style: TextStyle(
                           fontSize: 17,
                           decoration: TextDecoration.none,

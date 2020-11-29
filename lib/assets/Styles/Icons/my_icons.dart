@@ -13,3 +13,4 @@ const profil_loro = 'lib/assets/my_assets/Images/profil_loro.jpg';
 const profil_benji = 'lib/assets/my_assets/Images/profil_benji.jpg';
 
 const arrow = 'lib/assets/my_assets/Images/arrow.gif';
+const linkedIn = 'lib/assets/my_assets/Images/linkdin.png';

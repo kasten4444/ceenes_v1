@@ -58,7 +58,7 @@ class PrivacyPolicy_Route extends StatelessWidget {
                         ),
                         Text(
                           'Datenschutzerklärung',
-                          style: TextStyle(color: Colors.white, fontSize: 40),
+                          style: TextStyle(color: Colors.white, fontSize: 20),
                         )
                       ],
                     ),

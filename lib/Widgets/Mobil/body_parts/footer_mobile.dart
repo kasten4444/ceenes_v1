@@ -1,3 +1,4 @@
+import 'package:ceenes/Widgets/Desktop/privacy_policy_route/privacy_policy_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -6,7 +7,7 @@ import 'package:ceenes/assets/Styles/Icons/my_icons.dart';
 
 import '../../utils/header_button.dart';
 
-class FooterMobile extends StatelessWidget {
+class FooterMobil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,7 +15,6 @@ class FooterMobile extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-
           Padding(
             padding: const EdgeInsets.all(15),
             child: Container(
@@ -25,11 +25,23 @@ class FooterMobile extends StatelessWidget {
               ]),
             ),
           ),
-          HeaderButton('ABOUT US'),
-          HeaderButton('CONTACT US'),
-          HeaderButton('DATENSCHUTZ'),
-
-
+          TextButton(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'DATENSCHUTZ',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Segoe',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(context,
+              MaterialPageRoute(builder: (context) => PrivacyPolicy_Route()));
+            },
+          ),
         ],
       ),
     );

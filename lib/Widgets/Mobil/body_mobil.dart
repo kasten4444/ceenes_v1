@@ -2,6 +2,8 @@
 import 'package:ceenes/Widgets/Mobil/body_parts/footer_mobile.dart';
 import 'package:ceenes/Widgets/Mobil/body_parts/part_3.dart';
 import 'package:ceenes/Widgets/Mobil/body_parts/part_4.dart';
+import 'package:ceenes/Widgets/Mobil/body_parts/part_5.dart';
+import 'package:ceenes/Widgets/Mobil/body_parts/part_6.dart';
 import 'package:ceenes/assets/Styles/Colors/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +35,9 @@ class BodyMobil extends StatelessWidget {
             Part2(),
             Part3(),
             Part4(),
-            FooterMobile(),
+            Part5(),
+            Part6(),
+            FooterMobil(),
 
           ]),
         ),

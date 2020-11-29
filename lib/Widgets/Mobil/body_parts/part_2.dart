@@ -78,7 +78,7 @@ class Part2 extends StatelessWidget {
             alignment: Alignment.center,
             padding: const EdgeInsets.all(20),
             child: SelectableText(
-                        '2. START SWIPING',
+                        '1. CREATE A GROUP',
                         style: TextStyle(
                             fontSize: 45,
                             decoration: TextDecoration.none,
@@ -90,7 +90,7 @@ class Part2 extends StatelessWidget {
                 alignment: Alignment.center,
                 //color: Colors.pinkAccent,
                 child: ConstrainedBox(
-                  constraints: BoxConstraints(maxHeight: 300, maxWidth: 450),
+                  constraints: BoxConstraints(maxHeight: 250, maxWidth: 450),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 60),
                     child: Image.asset(
@@ -103,9 +103,7 @@ class Part2 extends StatelessWidget {
                 padding: const EdgeInsets.all(50),
                 child: SelectableText(
                         'Erstell eine Gruppe und lade deine Freunde ein. Lass alle Möglichkeiten'
-                        'offen oder triff weitere Beschränkungen. Nutze den QR Code oder den Link um '
-                            'deine Freunde'
-                        'einzuladen.',
+                        'offen oder triff weitere Beschränkungen. Nutze den QR Code oder den Link um deine Freunde einzuladen.',
                         style: TextStyle(
                           fontSize: 17,
                           decoration: TextDecoration.none,
