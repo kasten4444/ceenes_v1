@@ -98,7 +98,7 @@ class _Row6State extends State<Row6> {
                             padding: const EdgeInsets.all(8.0),
                             child: Column(
                               children: [
-                                Image.asset(profil_loro),
+                                Image.asset(profil_loro, height: 200,),
 
                                 SizedBox(
                                   height: 8,
@@ -127,7 +127,7 @@ class _Row6State extends State<Row6> {
                               padding: const EdgeInsets.all(8.0),
                               child: Column(
                                 children: [
-                                  Image.asset(profil_benji),
+                                  Image.asset(profil_benji, height: 200,),
 
                                   SizedBox(
                                     height: 8,

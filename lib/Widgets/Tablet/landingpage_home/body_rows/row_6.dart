@@ -97,26 +97,28 @@ class _Row6_TabletState extends State<Row6_Tablet> {
                         children: [
                           //profil Loro
                           GestureDetector(
-                            onTap:_launchURL2,
-                            child:                        Padding(
+                            onTap: _launchURL2,
+                            child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Column(
                                 children: [
-                                  Image.asset(profil_loro),
-
+                                  Image.asset(
+                                    profil_loro,
+                                    height: 150,
+                                  ),
                                   SizedBox(
                                     height: 8,
                                   ),
-
                                   Text(
                                     'Lorenz P.',
                                     style: TextStyle(color: Colors.white),
                                   ),
                                   Container(
                                       height: 20,
-                                      child:Image.asset(linkedIn, color: Colors.white,)
-                                  ),
-
+                                      child: Image.asset(
+                                        linkedIn,
+                                        color: Colors.white,
+                                      )),
                                 ],
                               ),
                             ),
@@ -126,13 +128,15 @@ class _Row6_TabletState extends State<Row6_Tablet> {
                           ),
                           //Profil benji
                           GestureDetector(
-                              onTap:_launchURL,
-                              child:Padding(
+                              onTap: _launchURL,
+                              child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Column(
                                   children: [
-                                    Image.asset(profil_benji),
-
+                                    Image.asset(
+                                      profil_benji,
+                                      height: 150,
+                                    ),
                                     SizedBox(
                                       height: 8,
                                     ),
@@ -142,12 +146,13 @@ class _Row6_TabletState extends State<Row6_Tablet> {
                                     ),
                                     Container(
                                         height: 20,
-                                        child:Image.asset(linkedIn, color: Colors.white,)
-                                    ),
+                                        child: Image.asset(
+                                          linkedIn,
+                                          color: Colors.white,
+                                        )),
                                   ],
                                 ),
-                              )
-                          )
+                              ))
                         ],
                       ),
                     )
