@@ -32,7 +32,9 @@ class _Part6State extends State<Part6> {
   Widget build(BuildContext context) {
     return Container(
       //color: Colors.green,
-      
+      padding: EdgeInsets.only(left: 20, right: 20),
+      height: MediaQuery.of(context).size.height- 100,
+
       child: Row(
         children: [
           Expanded(
@@ -47,7 +49,7 @@ class _Part6State extends State<Part6> {
                   SelectableText(
                     'ABOUT US.',
                     style: TextStyle(
-                        fontSize: 45,
+                        fontSize: 35,
                         decoration: TextDecoration.none,
                         color: my_pink,
                         fontFamily: 'Segoe',

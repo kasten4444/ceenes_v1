@@ -33,7 +33,7 @@ class _Part5State extends State<Part5> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 0),
       child: Container(
-        
+        padding: EdgeInsets.only(left: 20, right: 20),
         height: MediaQuery.of(context).size.height- 100,
         child: Row(
           children: [
@@ -49,7 +49,7 @@ class _Part5State extends State<Part5> {
                     SelectableText(
                       'TEST OUR LATEST FEATURES.',
                       style: TextStyle(
-                          fontSize: 45,
+                          fontSize: 35,
                           decoration: TextDecoration.none,
                           color: my_pink,
                           fontFamily: 'Segoe',

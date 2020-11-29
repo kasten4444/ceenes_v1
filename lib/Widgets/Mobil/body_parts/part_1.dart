@@ -33,10 +33,10 @@ class _Part1State extends State<Part1> {
     return Center(
         child: Container(
       //color: Colors.green,
-      height: MediaQuery.of(context).size.height,
+      height: MediaQuery.of(context).size.height- 90,
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Padding(
-          padding: const EdgeInsets.only(left: 40),
+          padding: const EdgeInsets.only(left: 20, top: 60),
           child: Align(
             alignment: Alignment.centerLeft,
             child: TypewriterAnimatedTextKit(
@@ -63,12 +63,12 @@ class _Part1State extends State<Part1> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top:80, bottom: 80),
+          padding: const EdgeInsets.only(top:20, bottom:30),
           child: Row(children: [
             Expanded(
                 flex: 1,
                 child: Container(
-                    padding: EdgeInsets.only(left: 40),
+                    padding: EdgeInsets.only(left: 20),
                     child: SelectableText(
                       'Wir haben es uns zur Aufgabe gemacht, dass du mit deinen Freunden in 2 Minuten den perfekte Film/Serie findest. Begib dich als Erste/er auf unser Abenteuer!',
                       style: TextStyle(
@@ -84,7 +84,7 @@ class _Part1State extends State<Part1> {
                 child: Align(
                   alignment: Alignment.centerRight,
                   child: Padding(
-                    padding: const EdgeInsets.only(bottom: 20, right: 40),
+                    padding: const EdgeInsets.only(bottom: 20, right: 20),
                     child: ConstrainedBox(
                       constraints: BoxConstraints(maxHeight: 250, maxWidth: 250),
                       child: Container(
@@ -100,13 +100,13 @@ class _Part1State extends State<Part1> {
           ]),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 40, right: 40),
+          padding: const EdgeInsets.only(left: 20, right: 20, bottom: 10 ),
           child: Container(
               //width: 400,
               child: Row(
             children: [
               Expanded(
-                flex: 4,
+                flex: 3,
                 child: Form(
                   key: _formKey,
                   autovalidate: _autovalidate,
