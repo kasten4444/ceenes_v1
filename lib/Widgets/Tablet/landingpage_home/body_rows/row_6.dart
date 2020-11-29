@@ -1,5 +1,7 @@
 import 'package:ceenes/assets/Styles/Colors/colors.dart';
 import 'package:ceenes/assets/Styles/Icons/my_icons.dart';
+import 'package:ceenes/assets/Styles/Icons/my_icons.dart';
+import 'package:ceenes/assets/Styles/Icons/my_icons.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/cupertino.dart';
@@ -12,28 +14,31 @@ class Row6_Tablet extends StatefulWidget {
 }
 
 class _Row6_TabletState extends State<Row6_Tablet> {
-    _launchURL() async {
-  const url = 'https://de.linkedin.com/in/benjamin-kasten-a68466155?challengeId=AQGWWfDdKCKNjwAAAXYVZyJsoBJBTAUesYA_Y30jgQvYM8XZnLmkfnDvN58rnfxhg077ug-e2Nqb_PqTIvsQiITK9rtxoP1jFw&submissionId=ab2c09ea-1410-4c16-c6a2-30032c387a20';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
+  _launchURL() async {
+    const url =
+        'https://de.linkedin.com/in/benjamin-kasten-a68466155?challengeId=AQGWWfDdKCKNjwAAAXYVZyJsoBJBTAUesYA_Y30jgQvYM8XZnLmkfnDvN58rnfxhg077ug-e2Nqb_PqTIvsQiITK9rtxoP1jFw&submissionId=ab2c09ea-1410-4c16-c6a2-30032c387a20';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
-}
+
   _launchURL2() async {
-  const url = 'https://de.linkedin.com/in/lorenz-pott-156a6513b';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
+    const url = 'https://de.linkedin.com/in/lorenz-pott-156a6513b';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
-}
+
   @override
   Widget build(BuildContext context) {
     return Container(
       //color: Colors.green,
       child: Padding(
-        padding: const EdgeInsets.only(left:80, right: 80),
+        padding: const EdgeInsets.only(left: 80, right: 80),
         child: Row(
           children: [
             Expanded(
@@ -57,11 +62,8 @@ class _Row6_TabletState extends State<Row6_Tablet> {
                       height: 15,
                     ),
                     ConstrainedBox(
-                      constraints: BoxConstraints(
-                        maxWidth: 800
-                      ),
+                      constraints: BoxConstraints(maxWidth: 800),
                       child: SelectableText.rich(
-
                         TextSpan(
                             text:
                                 'Wir sind zwei Wirtschaftsinformatikstudenten der Universität Paderborn. '
@@ -75,87 +77,80 @@ class _Row6_TabletState extends State<Row6_Tablet> {
                                 fontSize: 20,
                                 decoration: TextDecoration.none,
                                 fontFamily: 'Segoe'),
-                        children: [
-                          TextSpan(
-                            text: 'ceenes.app@gmail.com',
-                            style: TextStyle(
-                                color: my_pink,
-                                fontSize: 20,
-                                decoration: TextDecoration.none,
-                                fontFamily: 'Segoe'),
-                          )
-                        ]),
+                            children: [
+                              TextSpan(
+                                text: 'ceenes.app@gmail.com',
+                                style: TextStyle(
+                                    color: my_pink,
+                                    fontSize: 20,
+                                    decoration: TextDecoration.none,
+                                    fontFamily: 'Segoe'),
+                              )
+                            ]),
                       ),
                     ),
-
                     SizedBox(height: 20),
-                   Padding(
-                    padding: const EdgeInsets.only(bottom: 150),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        //profil Loro
-                        GestureDetector(
-                          onTap:_launchURL2,
-                          child:                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.transparent,
-                                backgroundImage: AssetImage(profil_loro),
-                                radius: 70,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 150),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          //profil Loro
+                          GestureDetector(
+                            onTap:_launchURL2,
+                            child:                        Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                children: [
+                                  Image.asset(profil_loro),
+
+                                  SizedBox(
+                                    height: 8,
+                                  ),
+
+                                  Text(
+                                    'Lorenz P.',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  Container(
+                                      height: 20,
+                                      child:Image.asset(linkedIn, color: Colors.white,)
+                                  ),
+
+                                ],
                               ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              
-                              Text(
-                                'Lorenz P.',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                              Container(
-                                height: 20,
-                                child:Image.asset(linkedIn)
+                            ),
+                          ),
+                          SizedBox(
+                            width: 25,
+                          ),
+                          //Profil benji
+                          GestureDetector(
+                              onTap:_launchURL,
+                              child:Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: [
+                                    Image.asset(profil_benji),
+
+                                    SizedBox(
+                                      height: 8,
+                                    ),
+                                    Text(
+                                      'Benjamin K.',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                    Container(
+                                        height: 20,
+                                        child:Image.asset(linkedIn, color: Colors.white,)
+                                    ),
+                                  ],
                                 ),
-                              
-                            ],
-                          ),
-                        ),
-                        ),
-                        SizedBox(
-                          width: 25,
-                        ),
-                        //Profil benji
-                        GestureDetector(
-                          onTap:_launchURL,
-                          child:Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.transparent,
-                                backgroundImage: AssetImage(profil_benji),
-                                radius: 70,
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              Text(
-                                'Benjamin K.',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                              Container(
-                                height: 20,
-                                child:Image.asset(linkedIn)
-                              ),
-                            ],
-                          ),
-                        )
-                        )
-                      ],
-                    ),
-                  )
+                              )
+                          )
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),

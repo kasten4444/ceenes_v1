@@ -97,11 +97,8 @@ class _Part6State extends State<Part6> {
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
                             children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.transparent,
-                                backgroundImage: AssetImage(profil_loro),
-                                radius: 70,
-                              ),
+                              Image.asset(profil_loro),
+
                               SizedBox(
                                 height: 8,
                               ),
@@ -112,7 +109,7 @@ class _Part6State extends State<Part6> {
                               ),
                               Container(
                                 height: 20,
-                                child:Image.asset(linkedIn)
+                                child:Image.asset(linkedIn, color: Colors.white,)
                                 ),
                               
                             ],
@@ -129,11 +126,8 @@ class _Part6State extends State<Part6> {
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
                             children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.transparent,
-                                backgroundImage: AssetImage(profil_benji),
-                                radius: 70,
-                              ),
+                              Image.asset(profil_benji),
+
                               SizedBox(
                                 height: 8,
                               ),
@@ -143,7 +137,7 @@ class _Part6State extends State<Part6> {
                               ),
                               Container(
                                 height: 20,
-                                child:Image.asset(linkedIn)
+                                child:Image.asset(linkedIn, color: Colors.white,)
                               ),
                             ],
                           ),
