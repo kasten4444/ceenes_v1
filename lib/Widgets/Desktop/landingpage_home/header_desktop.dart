@@ -56,7 +56,7 @@ class HeaderDesktopState extends State<HeaderDesktop> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              'CEENES',
+              'Ceenes',
               style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Segoe',

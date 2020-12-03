@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "ceenes-v1",
     "public": "build/web",
     "ignore": [
       "firebase.json",
