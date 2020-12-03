@@ -73,7 +73,7 @@ class HeaderMobilState extends State<HeaderMobil> {
                 context: context,
                 builder: (BuildContext context) {
                   return AlertDialog(
-                    backgroundColor: my_dark_sec,
+                    backgroundColor: Colors.grey[100],
                     content: Column(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
