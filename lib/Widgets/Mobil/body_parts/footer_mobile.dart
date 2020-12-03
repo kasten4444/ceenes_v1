@@ -38,8 +38,7 @@ class FooterMobil extends StatelessWidget {
               ),
             ),
             onPressed: () {
-              Navigator.push(context,
-              MaterialPageRoute(builder: (context) => PrivacyPolicy_Route()));
+              Navigator.pushNamed(context, '/privacy_policy');;
             },
           ),
         ],

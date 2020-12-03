@@ -1,3 +1,5 @@
+import 'package:ceenes/Widgets/Desktop/privacy_policy_route/privacy_policy_route.dart';
+import 'package:ceenes/Widgets/Tablet/privacy_policy_route_tablet/privacy_policy_route_tablet.dart';
 import 'package:ceenes/assets/Styles/Colors/colors.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
@@ -67,7 +69,15 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Ceenes',
-      home: MyHomePage(),
+      initialRoute: '/home',
+      routes: {
+        '/home': (context) => MyHomePage(),
+        '/v1': (context) => null,
+        '/v2': (context) =>  null,
+        '/privacy_policy': (context) => PrivacyPolicy_Route(),
+        '/privacy_policy_tablet': (context) => PrivacyPolicy_Route_Tablet()
+
+      },
     );
   }
 }

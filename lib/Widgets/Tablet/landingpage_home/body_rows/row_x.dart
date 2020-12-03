@@ -40,8 +40,7 @@ class RowX_Tablet extends StatelessWidget {
               ),
             ),
             onPressed: () {
-              Navigator.push(context,
-              MaterialPageRoute(builder: (context) => PrivacyPolicy_Route_Tablet()));
+              Navigator.pushNamed(context, '/privacy_policy_tablet');
             },
           ),
         ],
