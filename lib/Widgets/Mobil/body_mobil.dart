@@ -42,9 +42,9 @@ class _BodyMobilState extends State<BodyMobil> {
           children: [
             Text(
               'So funktioniert\'s',
-              style: TextStyle(color: Colors.white, fontSize: 20),
+              style: TextStyle(color: Colors.black87, fontSize: 20),
             ),
-            Icon(Icons.arrow_downward, color: Colors.white, size: 35,),
+            Icon(Icons.arrow_downward, color: Colors.black87, size: 35,),
           ],
         ),
       ),
@@ -59,7 +59,7 @@ class _BodyMobilState extends State<BodyMobil> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: my_dark_grey,
+      color: Colors.white,
       child: Container(
         child: ScrollablePositionedList.builder(
           itemCount: col.length,

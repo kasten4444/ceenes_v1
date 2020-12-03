@@ -43,7 +43,7 @@ class Row2_Tablet extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 20,
                         decoration: TextDecoration.none,
-                        color: Colors.white,
+                        color: Colors.black87,
                         fontFamily: 'Segoe',
                       ),
                     ),

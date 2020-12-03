@@ -70,7 +70,7 @@ class _Part6State extends State<Part6> {
                               'und bei der Umsetzung dieses Projekt unterstützen.\n'
                               'Für Kontaktanfragen sendet uns bitte eine Mail an ',
                           style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black87,
                               fontSize: 17,
                               decoration: TextDecoration.none,
                               fontFamily: 'Segoe'),
@@ -107,11 +107,11 @@ class _Part6State extends State<Part6> {
                               
                               Text(
                                 'Lorenz P.',
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(color: Colors.black87),
                               ),
                               Container(
                                 height: 20,
-                                child:Image.asset(linkedIn, color: Colors.white,)
+                                child:Image.asset(linkedIn, color: Colors.black87,)
                                 ),
                               
                             ],
@@ -135,11 +135,11 @@ class _Part6State extends State<Part6> {
                               ),
                               Text(
                                 'Benjamin K.',
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(color: Colors.black87),
                               ),
                               Container(
                                 height: 20,
-                                child:Image.asset(linkedIn, color: Colors.white,)
+                                child:Image.asset(linkedIn, color: Colors.black87,)
                               ),
                             ],
                           ),

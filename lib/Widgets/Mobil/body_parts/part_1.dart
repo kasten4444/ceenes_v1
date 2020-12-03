@@ -74,7 +74,7 @@ class _Part1State extends State<Part1> {
                       style: TextStyle(
                         fontSize: 20,
                         decoration: TextDecoration.none,
-                        color: Colors.white,
+                        color: Colors.black87,
                         fontFamily: 'Segoe',
                         fontWeight: FontWeight.normal,
                       ),
@@ -115,7 +115,7 @@ class _Part1State extends State<Part1> {
                       TextFormField(
                         decoration: InputDecoration(
                             errorMaxLines: 4,
-                            errorStyle: TextStyle(color: Colors.white),
+                            errorStyle: TextStyle(color: Colors.black87),
                             filled: true,
                             fillColor: my_pink,
                             //labelText: 'Email',

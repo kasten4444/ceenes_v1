@@ -43,7 +43,7 @@ class Part2 extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 17,
                     decoration: TextDecoration.none,
-                    color: Colors.white,
+                    color: Colors.black87,
                     fontFamily: 'Segoe',
                   ),
                 ),

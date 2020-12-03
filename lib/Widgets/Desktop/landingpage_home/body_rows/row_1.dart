@@ -83,7 +83,7 @@ class _Row1State extends State<Row1> {
                             style: TextStyle(
                               fontSize: 20,
                               decoration: TextDecoration.none,
-                              color: Colors.white,
+                              color: Colors.black87,
                               fontFamily: 'Segoe',
                             ),
                           ),
@@ -104,7 +104,7 @@ class _Row1State extends State<Row1> {
                                         decoration: InputDecoration(
                                             errorMaxLines: 4,
                                             errorStyle:
-                                                TextStyle(color: Colors.white),
+                                                TextStyle(color: Colors.black87),
                                             filled: true,
                                             fillColor: my_pink,
                                             //labelText: 'Email',
@@ -130,7 +130,7 @@ class _Row1State extends State<Row1> {
 
                                         //obscureText: true,
                                         style: TextStyle(
-                                            color: Colors.white, fontSize: 20),
+                                            color: Colors.black87, fontSize: 20),
                                         validator: (input) {
                                           if (input.isEmpty |
                                               !EmailValidator.validate(input)) {

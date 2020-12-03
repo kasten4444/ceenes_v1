@@ -73,7 +73,7 @@ class _Row6_TabletState extends State<Row6_Tablet> {
                                 'und bei der Umsetzung dieses Projekt unterstützen.\n'
                                 'Für Kontaktanfragen sendet uns bitte eine Mail an ',
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.black87,
                                 fontSize: 20,
                                 decoration: TextDecoration.none,
                                 fontFamily: 'Segoe'),
@@ -111,13 +111,13 @@ class _Row6_TabletState extends State<Row6_Tablet> {
                                   ),
                                   Text(
                                     'Lorenz P.',
-                                    style: TextStyle(color: Colors.white),
+                                    style: TextStyle(color: Colors.black87),
                                   ),
                                   Container(
                                       height: 20,
                                       child: Image.asset(
                                         linkedIn,
-                                        color: Colors.white,
+                                        color: Colors.black87,
                                       )),
                                 ],
                               ),
@@ -142,13 +142,13 @@ class _Row6_TabletState extends State<Row6_Tablet> {
                                     ),
                                     Text(
                                       'Benjamin K.',
-                                      style: TextStyle(color: Colors.white),
+                                      style: TextStyle(color: Colors.black87),
                                     ),
                                     Container(
                                         height: 20,
                                         child: Image.asset(
                                           linkedIn,
-                                          color: Colors.white,
+                                          color: Colors.black87,
                                         )),
                                   ],
                                 ),

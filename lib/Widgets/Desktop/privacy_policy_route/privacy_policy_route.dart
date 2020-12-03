@@ -13,7 +13,7 @@ class PrivacyPolicy_Route extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: Container(
-        color: my_dark_grey,
+        color: Colors.grey[100],
         child: Stack(
           children: [
             ListView(
@@ -28,8 +28,8 @@ class PrivacyPolicy_Route extends StatelessWidget {
                     data: privacy_policy,
                     style: {
                       "html": Style(
-                        backgroundColor: my_dark_grey,
-                        color: Colors.white,
+                        backgroundColor: Colors.white,
+                        color: Colors.black87,
                       )
                     },
                   ),
@@ -41,7 +41,7 @@ class PrivacyPolicy_Route extends StatelessWidget {
             Align(
               alignment: Alignment.topCenter,
               child: Container(
-                color: my_dark_grey,
+                color: Colors.grey[100],
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -58,7 +58,7 @@ class PrivacyPolicy_Route extends StatelessWidget {
                         ),
                         Text(
                           'Datenschutzerklärung',
-                          style: TextStyle(color: Colors.white, fontSize: 20),
+                          style: TextStyle(color: Colors.black87, fontSize: 20),
                         )
                       ],
                     ),

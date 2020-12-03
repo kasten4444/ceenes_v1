@@ -40,9 +40,9 @@ class BodyDesktopState extends State<BodyDesktop> {
           children: [
             Text(
               'So funktioniert\'s',
-              style: TextStyle(color: Colors.white, fontSize: 25),
+              style: TextStyle(color: Colors.black87, fontSize: 25),
             ),
-            Icon(Icons.arrow_downward, color: Colors.white, size: 40,),
+            Icon(Icons.arrow_downward, color: Colors.black87, size: 40,),
           ],
         ),
       ),
@@ -58,7 +58,7 @@ class BodyDesktopState extends State<BodyDesktop> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: my_dark_grey,
+      color: Colors.white,
       child: Container(
         child: ScrollablePositionedList.builder(
           itemCount: col.length,

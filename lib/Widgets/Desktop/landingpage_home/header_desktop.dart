@@ -37,7 +37,7 @@ class HeaderDesktopState extends State<HeaderDesktop> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: my_dark_sec,
+      color: Colors.grey[100],
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -56,9 +56,9 @@ class HeaderDesktopState extends State<HeaderDesktop> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              'Ceenes',
+              'CEENES',
               style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black87,
                   fontFamily: 'Segoe',
                   fontSize: 25,
                   fontWeight: FontWeight.bold, letterSpacing: 8),
@@ -73,7 +73,7 @@ class HeaderDesktopState extends State<HeaderDesktop> {
                 context: context,
                 builder: (BuildContext context) {
                   return AlertDialog(
-                    backgroundColor: my_dark_sec,
+                    backgroundColor: Colors.grey[100],
                     content: Column(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,7 +81,7 @@ class HeaderDesktopState extends State<HeaderDesktop> {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                              "Klicke auf das Email Icon, um uns eine Mail zu schreiben:",style: TextStyle(color: Colors.white, fontSize: 20), ),
+                              "Klicke auf das Email Icon, um uns eine Mail zu schreiben:",style: TextStyle(color: Colors.black87, fontSize: 20), ),
                         ),
                         Center(
                           child: FlatButton(
@@ -94,7 +94,7 @@ class HeaderDesktopState extends State<HeaderDesktop> {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            "Sollte sich kurz danach nicht dein Emailprogramm öffnen,\nschreib uns manuell eine Mail an\:",style: TextStyle(color: Colors.white, fontSize: 20),),
+                            "Sollte sich kurz danach nicht dein Emailprogramm öffnen,\nschreib uns manuell eine Mail an\:",style: TextStyle(color: Colors.black87, fontSize: 20),),
                         ),
                         Center(
                           child: SelectableText(
@@ -103,7 +103,7 @@ class HeaderDesktopState extends State<HeaderDesktop> {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            "Wir freuen uns von dir zu hören und melden uns\numgehend bei dir zurück.",style: TextStyle(color: Colors.white, fontSize: 20),),
+                            "Wir freuen uns von dir zu hören und melden uns\numgehend bei dir zurück.",style: TextStyle(color: Colors.black87, fontSize: 20),),
                         ),
                       ],
                     ),
