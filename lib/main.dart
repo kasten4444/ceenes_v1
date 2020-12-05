@@ -62,7 +62,15 @@ class _MyAppState extends State<MyApp> {
     // Show a loader until FlutterFire is initialized
     if (!_initialized) {
       return Container(
-        child: CircularProgressIndicator(),
+        child: Center(
+          child: Column(
+            children: [
+              CircularProgressIndicator(),
+              Text('When you are seeing this, please refresh this site manually.\n'
+                  'The connection to our database could not be established. ')
+            ],
+          ),
+        ),
       );
     }
 
