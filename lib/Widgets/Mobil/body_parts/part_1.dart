@@ -160,7 +160,7 @@ class _Part1State extends State<Part1> {
                   child: SizedBox(
                     width: double.maxFinite,
                     height: 59,
-                    child: RaisedButton(
+                    child: FlatButton(
                       color: my_blue,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(2.0),

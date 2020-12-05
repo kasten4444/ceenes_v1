@@ -151,7 +151,7 @@ class _Row1State extends State<Row1> {
                                   child: SizedBox(
                                     width: double.maxFinite,
                                     height: 59,
-                                    child: RaisedButton(
+                                    child: FlatButton(
                                       color: my_blue,
                                       shape: RoundedRectangleBorder(
                                         borderRadius:

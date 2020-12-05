@@ -8,7 +8,6 @@ import 'dart:html' as html;
 import 'package:mailto/mailto.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
 import '../../main.dart';
 import '../utils/header_button.dart';
 
@@ -19,7 +18,6 @@ class HeaderMobil extends StatefulWidget {
 
 class HeaderMobilState extends State<HeaderMobil> {
   final _formKey = GlobalKey<FormState>();
-
 
 // ...somewhere in your Flutter app...
   launchMailto() async {
@@ -34,87 +32,70 @@ class HeaderMobilState extends State<HeaderMobil> {
     await launch('$mailtoLink');
   }
 
+  _launchIG() async {
+    const url = 'https://www.instagram.com/ceenes.official/';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.grey[100],
+      height: 60,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: Container(
-              child: FlatButton(
-                child: Image.asset(icon_pink),
-                onPressed: () {
-                  html.window.location.reload();
-                },
-              ),
-              height: 40,
+          Container(
+            child: FlatButton(
+              child: Image.asset(icon_pink),
+              onPressed: () {
+                html.window.location.reload();
+              },
             ),
+            height: 30,
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
               'CEENES',
               style: TextStyle(
-                  color: Colors.black87,
+                  color: Colors.black,
                   fontFamily: 'Segoe',
                   fontSize: 25,
-                  fontWeight: FontWeight.bold, letterSpacing: 8),
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 8),
             ),
           ),
-          FlatButton(
-            shape: RoundedRectangleBorder(
-                borderRadius: new BorderRadius.circular(30.0)),
-            color: my_pink,
-            onPressed: () {
-              showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return AlertDialog(
-                    backgroundColor: Colors.grey[100],
-                    content: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                              "Klicke auf das Email Icon, um uns eine Mail zu schreiben:",style: TextStyle(color: Colors.black87, fontSize: 20), ),
-                        ),
-                        Center(
-                          child: FlatButton(
-                            child: Icon(Icons.email_rounded, color: my_pink, size: 50,),
-                            onPressed: () {
-                              launchMailto();
-                            },
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            "Sollte sich kurz danach nicht dein Emailprogramm öffnen,\nschreib uns manuell eine Mail an\:",style: TextStyle(color: Colors.black87, fontSize: 20),),
-                        ),
-                        Center(
-                          child: SelectableText(
-                            "ceenes.app@gmail.com",style: TextStyle(color: my_pink, fontSize: 20),),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            "Wir freuen uns von dir zu hören und melden uns\numgehend bei dir zurück.",style: TextStyle(color: Colors.black87, fontSize: 20),),
-                        ),
-                      ],
-                    ),
-                  );
+          Row(
+            children: [
+              IconButton(
+                //height: 30,
+                icon: Icon(
+                  Icons.mail,
+                  color: Colors.black,
+                  //size: 30,
+                ),
+                iconSize: 30,
+                color: my_pink,
+                onPressed: () {
+                  launchMailto();
                 },
-              );
-            },
-            child: Text(
-              'CONTACT US',
-              style: TextStyle(color: Colors.white),
-            ),
+              ),
+              SizedBox(
+                width: 2,
+              ),
+              GestureDetector(
+                  onTap: _launchIG,
+                  child: Image.asset(
+                    ig,
+                    color: Colors.black,
+                    height: 25,
+                  ))
+            ],
           ),
         ],
       ),

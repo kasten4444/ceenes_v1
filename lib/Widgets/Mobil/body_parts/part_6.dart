@@ -13,33 +13,35 @@ class Part6 extends StatefulWidget {
 
 class _Part6State extends State<Part6> {
   _launchURL() async {
-  const url = 'https://de.linkedin.com/in/benjamin-kasten-a68466155?challengeId=AQGWWfDdKCKNjwAAAXYVZyJsoBJBTAUesYA_Y30jgQvYM8XZnLmkfnDvN58rnfxhg077ug-e2Nqb_PqTIvsQiITK9rtxoP1jFw&submissionId=ab2c09ea-1410-4c16-c6a2-30032c387a20';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
+    const url =
+        'https://de.linkedin.com/in/benjamin-kasten-a68466155?challengeId=AQGWWfDdKCKNjwAAAXYVZyJsoBJBTAUesYA_Y30jgQvYM8XZnLmkfnDvN58rnfxhg077ug-e2Nqb_PqTIvsQiITK9rtxoP1jFw&submissionId=ab2c09ea-1410-4c16-c6a2-30032c387a20';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
-}
+
   _launchURL2() async {
-  const url = 'https://de.linkedin.com/in/lorenz-pott-156a6513b';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
+    const url = 'https://de.linkedin.com/in/lorenz-pott-156a6513b';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
-}
+
   @override
   Widget build(BuildContext context) {
     return Container(
       //color: Colors.green,
       padding: EdgeInsets.only(left: 20, right: 20),
-      height: MediaQuery.of(context).size.height- 100,
+      height: MediaQuery.of(context).size.height - 100,
 
       child: Row(
         children: [
           Expanded(
             child: Container(
-              
               //color: Colors.amber,
 
               child: Column(
@@ -94,57 +96,60 @@ class _Part6State extends State<Part6> {
                       children: [
                         //profil Loro
                         GestureDetector(
-                          onTap:_launchURL2,
-                          child:                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Image.asset(profil_loro, height: 150,),
-
-                              SizedBox(
-                                height: 8,
-                              ),
-                              
-                              Text(
-                                'Lorenz P.',
-                                style: TextStyle(color: Colors.black87),
-                              ),
-                              Container(
-                                height: 20,
-                                child:Image.asset(linkedIn, color: Colors.black87,)
+                          onTap: _launchURL2,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  profil_loro,
+                                  height: 140,
                                 ),
-                              
-                            ],
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                Text(
+                                  'Lorenz P.',
+                                  style: TextStyle(color: Colors.black87),
+                                ),
+                                Container(
+                                    height: 20,
+                                    child: Image.asset(
+                                      linkedIn,
+                                      color: Colors.black87,
+                                    )),
+                              ],
+                            ),
                           ),
                         ),
-                        ),
-                        SizedBox(
-                          width: 25,
-                        ),
+
                         //Profil benji
                         GestureDetector(
-                          onTap:_launchURL,
-                          child:Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Image.asset(profil_benji, height: 150,),
-
-                              SizedBox(
-                                height: 8,
+                            onTap: _launchURL,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    profil_benji,
+                                    height: 140,
+                                  ),
+                                  SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    'Benjamin K.',
+                                    style: TextStyle(color: Colors.black87),
+                                  ),
+                                  Container(
+                                      height: 20,
+                                      child: Image.asset(
+                                        linkedIn,
+                                        color: Colors.black87,
+                                      )),
+                                ],
                               ),
-                              Text(
-                                'Benjamin K.',
-                                style: TextStyle(color: Colors.black87),
-                              ),
-                              Container(
-                                height: 20,
-                                child:Image.asset(linkedIn, color: Colors.black87,)
-                              ),
-                            ],
-                          ),
-                        )
-                        )
+                            ))
                       ],
                     ),
                   )
@@ -157,4 +162,3 @@ class _Part6State extends State<Part6> {
     );
   }
 }
-

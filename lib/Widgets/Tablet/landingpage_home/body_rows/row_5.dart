@@ -138,7 +138,7 @@ class _Row5_TabletState extends State<Row5_Tablet> {
                                 child: SizedBox(
                                   width: double.maxFinite,
                                   height: 59,
-                                  child: RaisedButton(
+                                  child: FlatButton(
                                     color: my_blue,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(2.0),

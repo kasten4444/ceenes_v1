@@ -31,6 +31,14 @@ class HeaderTabletState extends State<HeaderTablet> {
     // or the toString() method.
     await launch('$mailtoLink');
   }
+  _launchIG() async {
+    const url = 'https://www.instagram.com/ceenes.official/';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {

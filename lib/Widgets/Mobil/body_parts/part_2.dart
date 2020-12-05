@@ -38,7 +38,7 @@ class Part2 extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(50),
                 child: SelectableText(
-                  'Erstell eine Gruppe und lade deine Freunde ein. Lass alle Möglichkeiten'
+                  'Erstell eine Gruppe und lade deine Freunde ein. Lass alle Möglichkeiten '
                   'offen oder triff weitere Beschränkungen. Nutze den QR Code oder den Link um deine Freunde einzuladen.',
                   style: TextStyle(
                     fontSize: 17,
