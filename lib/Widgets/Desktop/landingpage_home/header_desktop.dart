@@ -47,7 +47,7 @@ class HeaderDesktopState extends State<HeaderDesktop> {
     return Container(
       color: Colors.grey[100],
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Padding(
             padding: const EdgeInsets.all(15),
@@ -127,9 +127,10 @@ class HeaderDesktopState extends State<HeaderDesktop> {
                 ),
               ),
               SizedBox(width: 8,),
-              GestureDetector(
-                  onTap: _launchIG,
-                  child: Image.asset(ig, color: Colors.black, height: 30,))
+              IconButton(
+                icon: Image.asset(ig, color: Colors.black, height: 30,),
+                onPressed: _launchIG,
+              ),
             ],
           ),
         ],

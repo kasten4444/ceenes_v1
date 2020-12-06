@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:ceenes/Widgets/Desktop/privacy_policy_route/privacy_policy_route.dart';
 import 'package:ceenes/Widgets/Tablet/privacy_policy_route_tablet/privacy_policy_route_tablet.dart';
 import 'package:ceenes/assets/Styles/Colors/colors.dart';
@@ -9,6 +11,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:draggable_scrollbar/draggable_scrollbar.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'dart:html' as html;
 
 import 'Widgets/body_responsive.dart';
 import 'Widgets/header_responsive.dart';
@@ -61,14 +64,27 @@ class _MyAppState extends State<MyApp> {
 
     // Show a loader until FlutterFire is initialized
     if (!_initialized) {
-      return Container(
-        child: Center(
-          child: Column(
-            children: [
-              CircularProgressIndicator(),
-              Text('When you are seeing this, please refresh this site manually.\n'
-                  'The connection to our database could not be established. ')
-            ],
+      return Material(
+        child: Directionality(
+          textDirection: TextDirection.ltr,
+          child: Container(
+            child: Center(
+              child: Column(
+                children: [
+                  CircularProgressIndicator(),
+                  Text(
+                    'Solltest du diese Meldung hier sehen, aktualisiere bitte die Seite um auf ceenes.com zu gelangen hier:\n',
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.refresh, color: my_pink),
+                    onPressed: () {
+                      html.window.location.reload();
+                    },
+                  )
+                ],
+              ),
+            ),
           ),
         ),
       );
@@ -81,10 +97,9 @@ class _MyAppState extends State<MyApp> {
       routes: {
         '/home': (context) => MyHomePage(),
         '/v1': (context) => null,
-        '/v2': (context) =>  null,
+        '/v2': (context) => null,
         '/privacy_policy': (context) => PrivacyPolicy_Route(),
         '/privacy_policy_tablet': (context) => PrivacyPolicy_Route_Tablet()
-
       },
     );
   }
