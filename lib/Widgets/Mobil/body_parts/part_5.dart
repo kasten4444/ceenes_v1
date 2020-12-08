@@ -82,7 +82,7 @@ class _Part5State extends State<Part5> {
                         child: Row(
                           children: [
                             Expanded(
-                              flex: 5,
+                              flex: 4,
                               child: Form(
                                 key: _formKey,
                                 autovalidate: _autovalidate,
