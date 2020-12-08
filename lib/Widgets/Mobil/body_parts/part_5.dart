@@ -79,55 +79,54 @@ class _Part5State extends State<Part5> {
                     ),
                     SizedBox(height: 20),
                     Container(
-                        width: 400,
                         child: Row(
                           children: [
                             Expanded(
-                              flex: 4,
+                              flex: 5,
                               child: Form(
                                 key: _formKey,
                                 autovalidate: _autovalidate,
                                 child: Column(
                                   children: [
-                                    TextFormField(
-                                      decoration: InputDecoration(
-                                          errorMaxLines: 4,
-                                          errorStyle:
-                                              TextStyle(color: Colors.black87),
-                                          filled: true,
-                                          fillColor: my_pink,
-                                          //labelText: 'Email',
-                                          enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: my_pink,
+                                    SizedBox(
+                                      height: 60,
+                                      width: double.maxFinite,
+                                      child: TextFormField(
+                                        focusNode: _focusNode,
+                                        decoration: InputDecoration(
+                                          //errorMaxLines: 4,
+                                            errorStyle: TextStyle(color: Colors.black87),
+                                            filled: true,
+                                            fillColor: my_pink,
+                                            //labelText: 'Email',
+                                            enabledBorder: OutlineInputBorder(
+                                              borderSide: BorderSide(
+                                                color: my_pink,
+                                              ),
+                                              borderRadius: BorderRadius.circular(2.0),
                                             ),
-                                            borderRadius:
-                                                BorderRadius.circular(2.0),
-                                          ),
-                                          hintText: 'Deine Email...',
-                                          hintStyle: TextStyle(
-                                              color: Colors.white
-                                                  .withOpacity(0.75)),
-                                          focusedBorder: OutlineInputBorder(
-                                              borderSide:
-                                                  BorderSide(color: my_pink),
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(2))),
-                                          labelStyle: TextStyle(
-                                            color: Colors.white,
-                                          )),
+                                            hintText: 'Deine Email...',
+                                            hintStyle: TextStyle(
+                                                color: Colors.white.withOpacity(0.75)),
+                                            focusedBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(color: my_pink),
+                                                borderRadius:
+                                                BorderRadius.all(Radius.circular(2))),
+                                            labelStyle: TextStyle(
+                                              color: Colors.white,
+                                            )),
 
-                                      //obscureText: true,
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 20),
-                                      validator: (input) {
-                                        if (input.isEmpty |
-                                            !EmailValidator.validate(input)) {
-                                          return 'Bitte gebe eine gültige Email Adresse an';
-                                        }
-                                        return null;
-                                      },
-                                      controller: myController,
+                                        //obscureText: true,
+                                        style: TextStyle(color: Colors.white, fontSize: 20),
+                                        validator: (input) {
+                                          if (input.isEmpty |
+                                          !EmailValidator.validate(input)) {
+                                            return 'Bitte gib eine gültige Email an';
+                                          }
+                                          return null;
+                                        },
+                                        controller: myController,
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -139,10 +138,10 @@ class _Part5State extends State<Part5> {
                             Expanded(
                               flex: 1,
                               child: Padding(
-                                padding: const EdgeInsets.all(5.0),
+                                padding: const EdgeInsets.only(left: 5),
                                 child: SizedBox(
                                   width: double.maxFinite,
-                                  height: 59,
+                                  height: 60,
                                   child: FlatButton(
                                     color: my_blue,
                                     shape: RoundedRectangleBorder(
@@ -153,21 +152,15 @@ class _Part5State extends State<Part5> {
                                       String email = myController.text;
                                       print(email);
                                       if (_formKey.currentState.validate()) {
-                                        firestore
-                                            .collection("emails")
-                                            .add({"email": email});
+                                        firestore.collection("emails").add({"email": email});
                                         Toast.show(
                                           "Du wurdest erfolgreich hinzugefügt",
                                           context,
-
                                           duration: 2,
                                           gravity: Toast.TOP,
-
                                           backgroundColor: my_pink,
                                           textColor: Colors.white,
-
                                         );
-
                                       } else {
                                         setState(() {
                                           _autovalidate = true;

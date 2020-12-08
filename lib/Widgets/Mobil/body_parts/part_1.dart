@@ -25,15 +25,30 @@ class _Part1State extends State<Part1> {
     super.dispose();
   }
 
+  FocusNode _focusNode;
+
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   final _formKey = GlobalKey<FormState>();
+
+  @override
+  void initState() {
+    _focusNode = FocusNode();
+    //use this only if you want to remove the content of the tff when the focus gets lost
+    /*
+    _focusNode.addListener(() {
+      if (!_focusNode.hasFocus) myController.clear;
+    });
+
+     */
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Center(
         child: Container(
       //color: Colors.green,
-      height: MediaQuery.of(context).size.height- 90,
+      height: MediaQuery.of(context).size.height - 90,
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Padding(
           padding: const EdgeInsets.only(left: 20, top: 60),
@@ -63,7 +78,7 @@ class _Part1State extends State<Part1> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top:20, bottom:30),
+          padding: const EdgeInsets.only(top: 20, bottom: 30),
           child: Row(children: [
             Expanded(
                 flex: 1,
@@ -86,7 +101,8 @@ class _Part1State extends State<Part1> {
                   child: Padding(
                     padding: const EdgeInsets.only(bottom: 20, right: 20),
                     child: ConstrainedBox(
-                      constraints: BoxConstraints(maxHeight: 250, maxWidth: 250),
+                      constraints:
+                          BoxConstraints(maxHeight: 250, maxWidth: 250),
                       child: Container(
                         //color: Colors.grey,
                         child: Image.asset(
@@ -100,51 +116,56 @@ class _Part1State extends State<Part1> {
           ]),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20, bottom: 10 ),
+          padding: const EdgeInsets.only(left: 20, right: 20, bottom: 10),
           child: Container(
-              //width: 400,
               child: Row(
             children: [
               Expanded(
-                flex: 3,
+                flex: 5,
                 child: Form(
                   key: _formKey,
                   autovalidate: _autovalidate,
                   child: Column(
                     children: [
-                      TextFormField(
-                        decoration: InputDecoration(
-                            errorMaxLines: 4,
-                            errorStyle: TextStyle(color: Colors.black87),
-                            filled: true,
-                            fillColor: my_pink,
-                            //labelText: 'Email',
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: my_pink,
+                      SizedBox(
+                        height: 60,
+                        width: double.maxFinite,
+                        child: TextFormField(
+                          focusNode: _focusNode,
+                          decoration: InputDecoration(
+                              //errorMaxLines: 4,
+                              errorStyle: TextStyle(color: Colors.black87),
+                              filled: true,
+                              fillColor: my_pink,
+                              //labelText: 'Email',
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: my_pink,
+                                ),
+                                borderRadius: BorderRadius.circular(2.0),
                               ),
-                              borderRadius: BorderRadius.circular(2.0),
-                            ),
-                            hintText: 'Deine Email...',
-                            hintStyle: TextStyle(
-                                color: Colors.white.withOpacity(0.75)),
-                            focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: my_pink),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(2))),
-                            labelStyle: TextStyle(
-                              color: Colors.white,
-                            )),
+                              hintText: 'Deine Email...',
+                              hintStyle: TextStyle(
+                                  color: Colors.white.withOpacity(0.75)),
+                              focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: my_pink),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(2))),
+                              labelStyle: TextStyle(
+                                color: Colors.white,
+                              )),
 
-                        //obscureText: true,
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                        validator: (input) {
-                          if (input.isEmpty | !EmailValidator.validate(input)) {
-                            return 'Bitte gebe eine gültige Email Adresse an';
-                          }
-                          return null;
-                        },
-                        controller: myController,
+                          //obscureText: true,
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                          validator: (input) {
+                            if (input.isEmpty |
+                                !EmailValidator.validate(input)) {
+                              return 'Bitte gib eine gültige Email an';
+                            }
+                            return null;
+                          },
+                          controller: myController,
+                        ),
                       ),
                     ],
                   ),
@@ -159,7 +180,7 @@ class _Part1State extends State<Part1> {
                   padding: const EdgeInsets.only(left: 5),
                   child: SizedBox(
                     width: double.maxFinite,
-                    height: 59,
+                    height: 60,
                     child: FlatButton(
                       color: my_blue,
                       shape: RoundedRectangleBorder(
