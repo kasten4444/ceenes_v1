@@ -92,7 +92,7 @@ class _Part5State extends State<Part5> {
                                       height: 60,
                                       width: double.maxFinite,
                                       child: TextFormField(
-                                        focusNode: _focusNode,
+                                        //focusNode: _focusNode,
                                         decoration: InputDecoration(
                                           //errorMaxLines: 4,
                                             errorStyle: TextStyle(color: Colors.black87),
