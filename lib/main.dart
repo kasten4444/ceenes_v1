@@ -71,13 +71,19 @@ class _MyAppState extends State<MyApp> {
             child: Center(
               child: Column(
                 children: [
-                  CircularProgressIndicator(),
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: CircularProgressIndicator(
+                      valueColor: new AlwaysStoppedAnimation<Color>(my_blue),
+                    ),
+                  ),
                   Text(
-                    'Solltest du diese Meldung hier sehen, aktualisiere bitte die Seite um auf ceenes.com zu gelangen hier:\n',
-                    style: TextStyle(color: Colors.black),
+                    'Ups... es gab einen Fehler beim Aufbau der Verbindung zu unserer Datenbank. Entschuldige!\n'
+                        'Um zu ceenes.com zu gelangen, aktualisiere diese Seite über deinen Browser oder klicke hier:',
+                    style: TextStyle(color: Colors.black, fontSize: 28),
                   ),
                   IconButton(
-                    icon: Icon(Icons.refresh, color: my_pink),
+                    icon: Icon(Icons.refresh, color: my_pink, size: 25,),
                     onPressed: () {
                       html.window.location.reload();
                     },
